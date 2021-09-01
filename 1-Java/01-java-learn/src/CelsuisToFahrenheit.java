@@ -5,10 +5,10 @@ public class CelsuisToFahrenheit {
 		
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter temperature in celsius");
-		float celsiusTemp = input.nextFloat();
+		float celsius = input.nextFloat();
 		
-		float fahrenheitTemp = (celsiusTemp * 9/5f) + 32;
-		System.out.println("Temperature in Fahrenheit = " + fahrenheitTemp);
+		float fahrenheit = (celsius * 9/5f) + 32;
+		System.out.println("Temperature in Fahrenheit = " + fahrenheit);
 		
 		input.close();
 	}
