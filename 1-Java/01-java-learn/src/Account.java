@@ -12,6 +12,28 @@ public class Account {
 		this.transactions = transactions;
 	}
 	
+	public void printStatement() {
+		System.out.println("Account Statement of " + accountNumber);
+		System.out.println("Initial Balance: " + balance);
+		
+		System.out.println("\n---------------------------");
+		System.out.println("Type  Transaction   Balance");
+		System.out.println("---------------------------");
+		
+		for (Transaction transaction : transactions ) {
+			
+			if (transaction.getType() == 'W') {
+				balance -= transaction.getAmount();
+			} else if (transaction.getType() == 'D'){
+				balance += transaction.getAmount();
+			}
+			
+			transaction.displayTransaction(balance);
+		}
+		
+		System.out.println("---------------------------");
+	}
+	
 	public static void main(String args[]) {
 		
 		Transaction transaction1 = new Transaction('W', 2000);
@@ -23,5 +45,6 @@ public class Account {
 		Transaction[] transactionList = {transaction1, transaction2, transaction3, transaction4, transaction5 };
 	
 		Account account = new Account("1234567890", 5000.0, transactionList);
+		account.printStatement();
 	}
 }

@@ -7,8 +7,8 @@ public class MobileMenuLoop {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		int option = 0;
-		while (option != 4 ) {
+		int i = 0;
+		while (i == 0 ) {
 			System.out.println("Menu");
 			System.out.println("********");
 			System.out.println("1. Balanca Enquiry");
@@ -16,8 +16,8 @@ public class MobileMenuLoop {
 			System.out.println("3. Change Caller tune");
 			System.out.println("4. Exit");
 			System.out.println("Choose an option");
-			int option1 = sc.nextInt();
-			switch (option1) {
+			int option = sc.nextInt();
+			switch (option) {
 			case 1: 
 				System.out.println("Balance Enquiry");
 				break;
@@ -29,9 +29,10 @@ public class MobileMenuLoop {
 				break;		
 			case 4:
 				System.out.println("Exit");
-				System.exit(0);
-				break;				
+				continue;			
 			}
+			
+			continue;
 
 		}
 

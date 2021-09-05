@@ -10,9 +10,27 @@ public class Transaction {
 	}
 	
 	public void displayTransaction(double balance) {
-		System.out.printf("%4c %12.2f %8.2f\n", type, amount, balance);
+		System.out.printf("%4c %12.2f %9.2f\n", type, amount, balance);
 	}
 	
+	
+	
+	public char getType() {
+		return type;
+	}
+
+	public void setType(char type) {
+		this.type = type;
+	}
+
+	public double getAmount() {
+		return amount;
+	}
+
+	public void setAmount(double amount) {
+		this.amount = amount;
+	}
+
 	public static void main(String args[]) {
 		Transaction transaction1 = new Transaction('W', 2000);
 		Transaction transaction2 = new Transaction('D', 20000);
