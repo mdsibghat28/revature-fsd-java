@@ -1,32 +1,26 @@
-package com.revature.app.collection;
+package com.revature.app.stream;
 
 public class Person implements Comparable<Person> {
+	private long id;
 	private String name;
 	private int age;
-	private long id;
 	
 	public Person(String name, int age) {
 		super();
 		this.name = name;
 		this.age = age;
 	}
-	
-	
 
 	public Person(long id, String name, int age) {
 		super();
+		this.id = id;
 		this.name = name;
 		this.age = age;
-		this.id = id;
 	}
-	
-	
 	
 	public long getId() {
 		return id;
 	}
-
-
 
 	public String getName() {
 		return name;
@@ -35,14 +29,11 @@ public class Person implements Comparable<Person> {
 	public int getAge() {
 		return age;
 	}
-
-
+	
 	@Override
 	public String toString() {
-		return "Person [id=" + id + ", name= " + name + ", age=" + age + "]";
+		return "Person [id=" + id + ", name=" + name + ", age=" + age + "]";
 	}
-
-
 
 	@Override
 	public int hashCode() {
@@ -53,8 +44,6 @@ public class Person implements Comparable<Person> {
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		return result;
 	}
-
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -77,13 +66,12 @@ public class Person implements Comparable<Person> {
 		return true;
 	}
 
-
-
 	@Override
 	public int compareTo(Person person) {
 		//Person otherPerson = (Person) o;
-		System.out.println(this.name + " " + person.name + " " + name.compareTo(person.name));
-		return name.compareTo(person.name); // +ve - First object comes first; -ve - 2nd Object First; 0 - Equal
+		//System.out.println(this.name + " " + person.name + " " + name.compareTo(person.name));
+		//return name.compareTo(person.name); // +ve - First object comes first; -ve - 2nd Object First; 0 - Equal
+		return 0;
 		//return age - person.age;
 	}
 
