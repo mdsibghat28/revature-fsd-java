@@ -2,9 +2,9 @@ package com.revature.bankapp.form;
 
 import java.util.Scanner;
 
-import com.reavture.bankapp.model.Customer;
-import com.reavture.bankapp.model.DataManager;
 import com.revature.bankapp.menu.CustomerMenu;
+import com.revature.bankapp.model.Customer;
+import com.revature.bankapp.model.DataManager;
 
 public class LoginForm extends Form{
 	

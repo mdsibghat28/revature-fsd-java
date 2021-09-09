@@ -1,4 +1,4 @@
-package com.reavture.bankapp.model;
+package com.revature.bankapp.model;
 
 import java.util.List;
 

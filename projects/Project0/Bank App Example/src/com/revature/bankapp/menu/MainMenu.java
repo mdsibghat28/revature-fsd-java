@@ -2,10 +2,10 @@ package com.revature.bankapp.menu;
 
 import java.util.Scanner;
 
-import com.reavture.bankapp.model.Customer;
-import com.reavture.bankapp.model.DataManager;
 import com.revature.bankapp.form.LoginForm;
 import com.revature.bankapp.form.SignUp;
+import com.revature.bankapp.model.Customer;
+import com.revature.bankapp.model.DataManager;
 
 public class MainMenu extends Menu {
 
