@@ -7,7 +7,6 @@ public class BankApp {
 	private static String name;
 	private static String accountType;
 	private static long balance;
-	Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
 
