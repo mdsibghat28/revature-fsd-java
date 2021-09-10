@@ -4,9 +4,6 @@ import java.util.Scanner;
 
 import com.revature.bankapp.form.LoginForm;
 import com.revature.bankapp.form.SignUp;
-import com.revature.bankapp.model.Customer;
-import com.revature.bankapp.model.DataManager;
-
 public class MainMenu extends Menu {
 
 	public MainMenu(String name) {
@@ -21,7 +18,6 @@ public class MainMenu extends Menu {
 	@Override
 	void handleSelection() {
 		System.out.println("Selected Option is: " + selection);
-		Scanner sc = new Scanner(System.in);
 		switch (selection) {
 
 		case 1:
@@ -34,8 +30,16 @@ public class MainMenu extends Menu {
 			
 			LoginForm loginForm = new LoginForm("Customer Login");
 			loginForm.captureDataAndPerformAction();
-			sc.close();
+			break;
+			
+		case 3:
+			System.out.println("******* Work in Progress **********");
+			break;
+		
+		case 4:
+			System.out.println("********Work in Progress **********");
 			break;
 		}
+	
 	}
 }
