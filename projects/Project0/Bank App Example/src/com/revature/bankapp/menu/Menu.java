@@ -27,7 +27,6 @@ public abstract class Menu {
 		while (temp) {
 			try {
 				displayMenuAndCapture();
-//				displayMenu();
 
 //				Scanner sc = BankApp.getScanner();
 //				selection = Integer.parseInt(sc.nextLine());
@@ -44,6 +43,7 @@ public abstract class Menu {
 				System.out.println("Choose Options from the menu");
 			}
 		}
+		handleSelection();
 	}
 
 	public void displayMenu() {
@@ -68,7 +68,7 @@ public abstract class Menu {
 	public void displayMenuAndCapture() {
 		displayMenu();
 		captureSelection();
-		handleSelection();
+//		handleSelection();
 	}
 
 	abstract void handleSelection();

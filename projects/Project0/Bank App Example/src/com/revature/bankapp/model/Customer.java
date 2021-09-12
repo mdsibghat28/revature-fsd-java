@@ -2,19 +2,19 @@ package com.revature.bankapp.model;
 
 import java.util.List;
 
-import com.revature.bankapp.accountmanager.Account;
+import com.revature.bankapp.accounts.Account;
 
 public class Customer {
 
-	private long id;
+	private static long id;
 	private String name;
 	private String userId;
 	private String password;
-	private List<Account> accountList;
+	private static  List<Account> accountList;
 
-	private static long counter = 0;
+	private long counter = 0;
 
-	public Customer(String name, String userId, String password) {
+	public Customer(String name, String userId, String password, List<Account> accountList) {
 		super();
 		counter++;
 
@@ -22,9 +22,14 @@ public class Customer {
 		this.name = name;
 		this.userId = userId;
 		this.password = password;
+		this.accountList = accountList;
 	}
 
-	public long getId() {
+	public  List<Account> getAccountList() {
+		return accountList;
+	}
+
+	public static long getId() {
 		return id;
 	}
 
@@ -39,6 +44,11 @@ public class Customer {
 	public String getPassword() {
 		return password;
 	}
+	
+	public static void addAccount(Account account) {
+		accountList.add(account);
+	}
+	
 	
 
 }

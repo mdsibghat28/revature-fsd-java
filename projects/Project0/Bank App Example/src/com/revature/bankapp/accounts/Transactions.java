@@ -1,4 +1,4 @@
-package com.revature.bankapp.accountmanager;
+package com.revature.bankapp.accounts;
 
 public class Transactions {
 

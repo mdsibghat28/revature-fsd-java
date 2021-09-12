@@ -37,7 +37,7 @@ public class MainMenu extends Menu {
 			break;
 		
 		case 4:
-			System.out.println("********Work in Progress **********");
+			System.out.println("********Exit Successfull. **********");
 			break;
 		}
 	
