@@ -1,31 +1,26 @@
 package com.revature.bankapp.accounts;
 
-
 public class Account {
-	
+
 	private String accountNumber;
 	private double initialAmount;
 //	private Transactions[] transactions;
-	
-	
+
 //	public Account(String accountNumber, double balance, Transactions[] transactions) {
 //		this.accountNumber = accountNumber;
 //		this.balance = balance;
 //		this.transactions = transactions;
 //	}
-	
-	public Account(String accountNumber, double balance) {
-	super();
-	this.accountNumber = accountNumber;
-	this.initialAmount = balance;
-}
 
-	
-	
+	public Account(String accountNumber, double initialAmount) {
+		super();
+		this.accountNumber = accountNumber;
+		this.initialAmount = initialAmount;
+	}
+
 	public String getAccountNumber() {
 		return accountNumber;
 	}
-
 
 	public double getBalance() {
 		return initialAmount;
@@ -55,4 +50,3 @@ public class Account {
 //	}
 //	
 }
-

@@ -6,31 +6,30 @@ import com.revature.bankapp.accounts.Account;
 
 public class Customer {
 
-	private static long id;
+	private long customerId;
 	private String name;
 	private String userId;
 	private String password;
-	private static  List<Account> accountList;
+	public static  List<Account> accountList;
 
-	private long counter = 0;
+	private static long counter = 0;
 
-	public Customer(String name, String userId, String password, List<Account> accountList) {
+	public Customer(String name, String userId, String password) {
 		super();
 		counter++;
 
-		this.id = counter;
+		this.customerId = counter;
 		this.name = name;
 		this.userId = userId;
 		this.password = password;
-		this.accountList = accountList;
 	}
 
-	public  List<Account> getAccountList() {
+	public static List<Account> getAccountList() {
 		return accountList;
 	}
 
-	public static long getId() {
-		return id;
+	public long getId() {
+		return customerId;
 	}
 
 	public String getName() {
@@ -44,11 +43,15 @@ public class Customer {
 	public String getPassword() {
 		return password;
 	}
-	
-	public static void addAccount(Account account) {
+
+	public void addAccount(Account account) {
 		accountList.add(account);
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return "Customer [Name=" + name + ", User Id=" + userId + ", Password=" + password + ", Customer Id="
+				+ customerId + "]";
+	}
 
 }

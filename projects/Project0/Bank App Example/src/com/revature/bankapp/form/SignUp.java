@@ -33,7 +33,7 @@ public class SignUp extends Form {
 	@Override
 	public void action() {
 		
-		DataManager.addCustomer(new Customer(name, userId, password, null));
+		DataManager.addCustomer(new Customer(name, userId, password));
 		System.out.println("Customer added succesfully");
 		success = true;
 		MainMenu mainMenu = new MainMenu("Main Menu");
