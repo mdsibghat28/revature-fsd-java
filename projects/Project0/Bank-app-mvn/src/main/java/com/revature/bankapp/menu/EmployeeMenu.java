@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 import com.revature.bankapp.accounts.Account;
+import com.revature.bankapp.accounts.PendingAccounts;
 import com.revature.bankapp.accounts.Transactions;
 import com.revature.bankapp.dao.EmployeeDao;
 import com.revature.bankapp.dao.impl.EmployeeDaoImpl;
@@ -20,6 +21,7 @@ public class EmployeeMenu extends Menu{
 		addMenuItems("View Customers");
 		addMenuItems("View Accounts");
 		addMenuItems("View Transactions");
+		addMenuItems("Pending Accounts");
 		addMenuItems("Logout");
 		
 	}
@@ -78,9 +80,17 @@ public class EmployeeMenu extends Menu{
 			}
 			displayMenuLoop();
 			break;
+			
 		case 5:
+			PendingAccounts pa = new PendingAccounts();
+			pa.viewPending();
+			
+			break;
+			
+		case 6:
 			MainMenu mm = new MainMenu("Main Menu");
 			mm.displayMenuLoop();
+			break;
 		}
 		
 	}

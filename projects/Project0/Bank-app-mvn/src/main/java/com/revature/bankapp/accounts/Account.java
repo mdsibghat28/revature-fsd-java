@@ -6,14 +6,16 @@ import java.util.Scanner;
 import com.revature.bankapp.dao.impl.AccountDaoImpl;
 
 public class Account {
-
+	
+	private int id;
 	private String accountNumber;
 	private double initialAmount;
 	private String name;
 	private int customerId;
-	AccountDaoImpl accdao = new AccountDaoImpl();
+	private char approved;
 	boolean success = true;
 
+	AccountDaoImpl accdao = new AccountDaoImpl();
 	Scanner sc = new Scanner(System.in);
 	
 	public Account(String accountNumber, double initialAmount) {
@@ -26,6 +28,23 @@ public class Account {
 
 	}
 	
+	
+	public char getApproved() {
+		return approved;
+	}
+
+	public void setApproved(char approved) {
+		this.approved = approved;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -56,6 +75,10 @@ public class Account {
 
 	public void setAccountNumber(String accountNumber) {
 		this.accountNumber = accountNumber;
+	}
+	
+	public String printId() {
+		return "Account Id: "+ id +" Account Number: " + accountNumber + ", Balance:" + initialAmount;
 	}
 	
 	public String print() {

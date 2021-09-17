@@ -1,9 +1,14 @@
 package com.revature.bankapp.menu;
 
+import java.sql.SQLException;
+
 import com.revature.bankapp.accounts.ViewAccounts;
+import com.revature.bankapp.dao.impl.AccountDaoImpl;
 import com.revature.bankapp.form.CreateAccount;
 
 public class CustomerMenu extends Menu {
+	
+	AccountDaoImpl accdao = new AccountDaoImpl();
 
 	public CustomerMenu(String name) {
 		super(name);
@@ -34,8 +39,17 @@ public class CustomerMenu extends Menu {
 		case 3:
 			
 			WithdrawDeposit wd = new WithdrawDeposit("Transaction Menu");
-			wd.getAccount();
-			wd.displayMenuLoop();
+			String temp = wd.getAccount();
+			try {
+				if (accdao.validAccount(temp).getApproved() == 'Y') {
+					wd.displayMenuLoop();
+				} else {
+					System.out.println("Account Not Approved");
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+
 			
 			break;
 

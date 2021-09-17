@@ -24,10 +24,11 @@ public class WithdrawDeposit extends Menu{
 		addMenuItems("LogOut");
 	}
 	
-	public void getAccount() {
+	public String getAccount() {
 		System.out.println("Enter Account number to make transaction: ");
 		accNumber = sc.nextLine();
 		System.out.println("Account Number: " + accNumber);
+		return accNumber;
 	}
 
 

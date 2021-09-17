@@ -38,6 +38,7 @@ public class CreateAccount extends Form {
 		try {
 			adao.create(new Account(accountNumber, initialAmount));
 		} catch (SQLException e) {
+			e.printStackTrace();
 			System.out.println("Account not created");
 		}
 		System.out.println("Account created successfully ");
