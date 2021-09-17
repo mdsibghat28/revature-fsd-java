@@ -84,7 +84,7 @@ public class EmployeeMenu extends Menu{
 		case 5:
 			PendingAccounts pa = new PendingAccounts();
 			pa.viewPending();
-			
+			displayMenuLoop();
 			break;
 			
 		case 6:

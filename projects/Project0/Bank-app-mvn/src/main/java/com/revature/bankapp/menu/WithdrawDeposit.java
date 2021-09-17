@@ -77,7 +77,7 @@ public class WithdrawDeposit extends Menu{
 			} catch (SQLException e1) {
 				e1.printStackTrace();
 			}
-			cm.displayMenu();
+			cm.displayMenuLoop();
 			break;
 		
 		case 5:
