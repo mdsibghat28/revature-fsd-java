@@ -75,11 +75,15 @@ public class Transactions {
 	public void setAmount(double amount) {
 		this.amount = amount;
 	}
+	
+	public String print() {
+		return "Type: " + type + "  Amount: "+ amount;
+	}
 
 	@Override
 	public String toString() {
-		return "CustomerId: " + customerId + "  Name: " + name + "  accountNumber: " + accountNumber
-				+ "  initialAmount: " + initialAmount + "  accountId: " + accountId + "  type: " + type + "  amount: "
+		return "CustomerId: " + customerId + "  Name: " + name + "  Account Number: " + accountNumber
+				+ "  Balance: " + initialAmount + "  Account Id: " + accountId + "  Type: " + type + "  Amount: "
 				+ amount;
 	}
 

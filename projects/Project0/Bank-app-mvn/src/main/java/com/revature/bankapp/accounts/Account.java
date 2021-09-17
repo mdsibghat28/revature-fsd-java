@@ -57,6 +57,10 @@ public class Account {
 	public void setAccountNumber(String accountNumber) {
 		this.accountNumber = accountNumber;
 	}
+	
+	public String print() {
+		return "Account Number: " + accountNumber + ", Balance:" + initialAmount;
+	}
 
 	@Override
 	public String toString() {

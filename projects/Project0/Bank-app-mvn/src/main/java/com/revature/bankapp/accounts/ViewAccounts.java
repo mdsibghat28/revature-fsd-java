@@ -15,7 +15,7 @@ public class ViewAccounts {
 		try {
 			List<Account> accounts = accdao.accountList();
 			for (int i = 0; i < accounts.size(); i++) {
-				System.out.println((i + 1) + ") " + accounts.get(i));
+				System.out.println((i + 1) + ") " + accounts.get(i).print());
 			}
 			CustomerMenu cm = new CustomerMenu("Customer Menu");
 			cm.displayMenuLoop();
@@ -32,7 +32,7 @@ public class ViewAccounts {
 		try {
 			List<Transactions> transaction = accdao.transactionList();
 			for (int i = 0; i < transaction.size(); i++) {
-				System.out.println((i + 1) + ") " + transaction.get(i));
+				System.out.println((i + 1) + ") " + transaction.get(i).print());
 			}
 			CustomerMenu cm = new CustomerMenu("Customer Menu");
 			
