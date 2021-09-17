@@ -2,8 +2,6 @@ package com.revature.bankapp.menu;
 
 import com.revature.bankapp.accounts.ViewAccounts;
 import com.revature.bankapp.form.CreateAccount;
-import com.revature.bankapp.form.LoginForm;
-import com.revature.bankapp.form.SignUp;
 
 public class CustomerMenu extends Menu {
 
@@ -11,6 +9,7 @@ public class CustomerMenu extends Menu {
 		super(name);
 		addMenuItems("Open New Account");
 		addMenuItems("View Accounts");
+		addMenuItems("Transactions");
 		addMenuItems("Back to main menu");
 		addMenuItems("Exit");
 
@@ -18,7 +17,6 @@ public class CustomerMenu extends Menu {
 
 	@Override
 	void handleSelection() {
-		System.out.println("Selected Option is: " + selection);
 		switch (selection) {
 
 		case 1:
@@ -28,16 +26,23 @@ public class CustomerMenu extends Menu {
 			break;
 
 		case 2:
-
 			ViewAccounts.accountsList();
 			break;
-
+			
 		case 3:
+			
+			WithdrawDeposit wd = new WithdrawDeposit("Transaction Menu");
+			wd.getAccount();
+			wd.displayMenuLoop();
+			
+			break;
+
+		case 4:
 			MainMenu mainMenu = new MainMenu("Main Menu");
 			mainMenu.displayMenuLoop();
 			break;
 			
-		case 4:
+		case 5:
 			System.out.println("Thank you Visit again");
 			break;
 		}

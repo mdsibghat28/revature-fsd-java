@@ -9,9 +9,9 @@ public class Transactions {
 		this.type = type;
 		this.amount = amount;
 	}
-
-	public void displayTransaction(double balance) {
-		System.out.printf("%4c %12.2f %9.2f\n", type, amount, balance);
+	
+	public Transactions() {
+		
 	}
 
 	public char getType() {
@@ -29,5 +29,23 @@ public class Transactions {
 	public void setAmount(double amount) {
 		this.amount = amount;
 	}
+
+	@Override
+	public String toString() {
+		return "Type: " + type + ", Amount: " + amount ;
+	}
+	
+	
+	
+//	public static double transaction(char type, double amount) {
+//		double balance = Account.getInitialAmount();
+//		if ( type == 'W') {
+//			balance += amount;
+//		} else if (type == 'D'){
+//			balance  -= amount;
+//		}
+//		return balance;
+//	}
+
 
 }

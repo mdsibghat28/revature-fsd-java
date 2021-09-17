@@ -9,8 +9,8 @@ import java.util.List;
 
 import com.revature.app.dao.EmployeeDao;
 import com.revature.app.dao.Util;
-import com.revature.app.model.Department;
 import com.revature.app.model.Employee;
+import com.revature.app.model.Department;
 
 public class EmployeeDaoImpl implements EmployeeDao {
 

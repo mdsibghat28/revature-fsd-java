@@ -3,4 +3,15 @@
   <groupId>com.revature.bankapp</groupId>
   <artifactId>bank-app-mvn</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  	<properties>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.cimpiler.source>1.8</maven.cimpiler.source>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.26</version>
+		</dependency>
+	</dependencies>
 </project>

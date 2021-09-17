@@ -26,10 +26,6 @@ public abstract class Menu {
 			try {
 				displayMenuAndCapture();
 
-//				Scanner sc = BankApp.getScanner();
-//				selection = Integer.parseInt(sc.nextLine());
-//				handleSelection();
-
 				if (selection > 0 && selection <= menuItems.size()) {
 					temp = false;
 				} else {

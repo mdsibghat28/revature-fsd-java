@@ -17,7 +17,6 @@ public class MainMenu extends Menu {
 
 	@Override
 	void handleSelection() {
-		System.out.println("Selected Option is: " + selection);
 		switch (selection) {
 
 		case 1:

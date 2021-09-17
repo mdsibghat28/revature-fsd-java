@@ -7,7 +7,7 @@ public class DataManager {
 
 	public static List<Customer> customerList = new ArrayList<Customer>();
 
-	private static Customer currentCustomer;
+	public static Customer currentCustomer;
 
 	public static void addCustomer(Customer customer) {
 
