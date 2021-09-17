@@ -12,7 +12,7 @@ import com.revature.bankapp.model.Customer;
 class CustomerDaoImplTest {
 
 	@Test
-	void test() {
+	void testCreate() {
 		CustomerDao dao = new CustomerDaoImpl();
 		Customer customer = new Customer("sib", "sib123", "123", null);
 		try {

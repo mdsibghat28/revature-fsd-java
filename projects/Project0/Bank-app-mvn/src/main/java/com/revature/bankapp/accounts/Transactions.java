@@ -2,6 +2,11 @@ package com.revature.bankapp.accounts;
 
 public class Transactions {
 
+	private int customerId;
+	private String name;
+	private String accountNumber;
+	private double initialAmount;
+	private int accountId;
 	private char type;
 	private double amount;
 
@@ -12,6 +17,47 @@ public class Transactions {
 	
 	public Transactions() {
 		
+	}
+	
+
+	public int getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAccountNumber() {
+		return accountNumber;
+	}
+
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+
+	public double getInitialAmount() {
+		return initialAmount;
+	}
+
+	public void setInitialAmount(double initialAmount) {
+		this.initialAmount = initialAmount;
+	}
+
+	public int getAccountId() {
+		return accountId;
+	}
+
+	public void setAccountId(int accountId) {
+		this.accountId = accountId;
 	}
 
 	public char getType() {
@@ -32,20 +78,15 @@ public class Transactions {
 
 	@Override
 	public String toString() {
-		return "Type: " + type + ", Amount: " + amount ;
+		return "CustomerId: " + customerId + "  Name: " + name + "  accountNumber: " + accountNumber
+				+ "  initialAmount: " + initialAmount + "  accountId: " + accountId + "  type: " + type + "  amount: "
+				+ amount;
 	}
+
+
 	
 	
-	
-//	public static double transaction(char type, double amount) {
-//		double balance = Account.getInitialAmount();
-//		if ( type == 'W') {
-//			balance += amount;
-//		} else if (type == 'D'){
-//			balance  -= amount;
-//		}
-//		return balance;
-//	}
+
 
 
 }

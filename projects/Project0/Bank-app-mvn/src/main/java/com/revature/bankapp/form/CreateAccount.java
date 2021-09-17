@@ -34,17 +34,13 @@ public class CreateAccount extends Form {
 
 	@Override
 	public void action() {
-		AccountDao adao= new AccountDaoImpl();
+		AccountDao adao = new AccountDaoImpl();
 		try {
 			adao.create(new Account(accountNumber, initialAmount));
 		} catch (SQLException e) {
 			System.out.println("Account not created");
 		}
 		System.out.println("Account created successfully ");
-//		System.out.println(new Account(accountNumber, initialAmount));
-//		Customer.addAccount(new Account(accountNumber, initialAmount, transactions));
-		CustomerMenu customerMenu = new CustomerMenu("Customer Menu");
-		customerMenu.displayMenuLoop();
 		success = true;
 
 	}

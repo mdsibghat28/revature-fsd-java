@@ -23,6 +23,8 @@ public class CustomerMenu extends Menu {
 
 			CreateAccount createAcc = new CreateAccount("Account details");
 			createAcc.captureDataAndPerformAction();
+			CustomerMenu customerMenu = new CustomerMenu("Customer Menu");
+			customerMenu.displayMenuLoop();
 			break;
 
 		case 2:

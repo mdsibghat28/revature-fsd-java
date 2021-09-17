@@ -81,6 +81,19 @@ public class AccountDaoImpl implements AccountDao {
 		}
 
 	}
+	
+	public void insertTransfer(Transactions transaction) throws SQLException {
+		try (Connection connection = Util.getConnection()) {
+			String sql = "insert into transaction (type, amount, account_id) values (?, ?, ?)";
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setString(1, String.valueOf(transaction.getType()));
+			statement.setDouble(2, transaction.getAmount());
+			statement.setInt(3, transferAccountId);
+			statement.executeUpdate();
+		}
+	}
+	
+	
 
 	public void update(Account account) throws SQLException {
 		try (Connection connection = Util.getConnection()) {
@@ -127,7 +140,7 @@ public class AccountDaoImpl implements AccountDao {
 		try (Connection connection = Util.getConnection()) {
 			String sql = "select * from account where account_number = ?";
 			PreparedStatement statement = connection.prepareStatement(sql);
-			statement.setString(1, Account.transferAccNum);
+			statement.setString(1, WithdrawDeposit.transferAccNum);
 			ResultSet resultSet = statement.executeQuery();
 			while (resultSet.next()) {
 				transferAccountId = resultSet.getInt("id");

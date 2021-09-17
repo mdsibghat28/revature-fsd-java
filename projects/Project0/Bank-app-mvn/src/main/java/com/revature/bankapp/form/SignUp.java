@@ -46,10 +46,8 @@ public class SignUp extends Form {
 		} catch (SQLException e) {
 			System.out.println("Cannot create customer");
 		}
-		System.out.println("Customer added succesfully");
+		System.out.println("Registeration succesfully");
 		success = true;
-		MainMenu mainMenu = new MainMenu("Main Menu");
-		mainMenu.displayMenuLoop();
 		
 	}
 	
