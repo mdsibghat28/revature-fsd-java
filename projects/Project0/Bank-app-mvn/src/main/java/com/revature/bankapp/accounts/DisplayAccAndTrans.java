@@ -7,7 +7,7 @@ import java.util.List;
 import com.revature.bankapp.dao.impl.AccountDaoImpl;
 import com.revature.bankapp.menu.CustomerMenu;
 
-public class ViewAccounts {
+public class DisplayAccAndTrans {
 
 	public static ArrayList<Account> accountsList() {
 

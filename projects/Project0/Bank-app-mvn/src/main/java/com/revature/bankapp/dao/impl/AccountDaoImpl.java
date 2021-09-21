@@ -70,7 +70,7 @@ public class AccountDaoImpl implements AccountDao {
 		return account;
 	}
 
-	public void insert(Transactions transaction) throws SQLException {
+	public static void insert(Transactions transaction) throws SQLException {
 		try (Connection connection = Util.getConnection()) {
 			String sql = "insert into transaction (type, amount, account_id) values (?, ?, ?)";
 			PreparedStatement statement = connection.prepareStatement(sql);
@@ -116,12 +116,9 @@ public class AccountDaoImpl implements AccountDao {
 				transaction.setType(resultSet.getString("type").charAt(0));
 				transaction.setAmount(resultSet.getDouble("amount"));
 				transactionList.add(transaction);
-
 			}
 		}
-
 		return transactionList;
-
 	}
 
 	public void updateTransfer(Account account) throws SQLException {

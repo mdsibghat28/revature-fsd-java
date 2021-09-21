@@ -2,7 +2,7 @@ package com.revature.bankapp.menu;
 
 import java.sql.SQLException;
 
-import com.revature.bankapp.accounts.ViewAccounts;
+import com.revature.bankapp.accounts.DisplayAccAndTrans;
 import com.revature.bankapp.dao.impl.AccountDaoImpl;
 import com.revature.bankapp.form.CreateAccount;
 
@@ -33,7 +33,7 @@ public class CustomerMenu extends Menu {
 			break;
 
 		case 2:
-			ViewAccounts.accountsList();
+			DisplayAccAndTrans.accountsList();
 			break;
 			
 		case 3:

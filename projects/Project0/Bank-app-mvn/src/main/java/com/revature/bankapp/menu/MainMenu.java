@@ -1,7 +1,5 @@
 package com.revature.bankapp.menu;
 
-import java.util.Scanner;
-
 import com.revature.bankapp.form.EmployeeLogin;
 import com.revature.bankapp.form.LoginForm;
 import com.revature.bankapp.form.SignUp;

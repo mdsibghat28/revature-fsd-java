@@ -1,7 +1,6 @@
 package com.revature.bankapp.model;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import com.revature.bankapp.accounts.Account;
 

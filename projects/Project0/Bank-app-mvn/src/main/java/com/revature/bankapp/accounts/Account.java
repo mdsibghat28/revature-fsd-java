@@ -14,8 +14,6 @@ public class Account {
 	private int customerId;
 	private char approved;
 	boolean success = true;
-
-	AccountDaoImpl accdao = new AccountDaoImpl();
 	Scanner sc = new Scanner(System.in);
 	
 	public Account(String accountNumber, double initialAmount) {
@@ -92,15 +90,13 @@ public class Account {
 
 	public double withdraw(double withdrawAmount) {
 		while (success) {
-//			System.out.println("Enter amount: ");
-//			double withdrawAmount = sc.nextDouble();
 			if (withdrawAmount < 0) {
 				System.out.println("Enter Amount greater than 0");
 			} else if (withdrawAmount <= initialAmount) {
 				initialAmount -= withdrawAmount;
 				success = false;
 				try {
-					accdao.insert(new Transactions('D', withdrawAmount));
+					AccountDaoImpl.insert(new Transactions('D', withdrawAmount));
 					accdao.update(this);
 					System.out.println("Successfull");
 				} catch (SQLException e) {
@@ -140,13 +136,11 @@ public class Account {
 		try {
 			accdao.insertTransfer(new Transactions('C', amount));
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		try {
 			accdao.updateTransfer(this);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
