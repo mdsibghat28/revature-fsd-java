@@ -8,7 +8,7 @@ import com.revature.bankapp.accounts.PendingAccounts;
 import com.revature.bankapp.accounts.Transactions;
 import com.revature.bankapp.dao.EmployeeDao;
 import com.revature.bankapp.dao.impl.EmployeeDaoImpl;
-import com.revature.bankapp.form.CreateAccount;
+import com.revature.bankapp.form.NewAccount;
 import com.revature.bankapp.form.LoginForm;
 import com.revature.bankapp.form.SignUp;
 import com.revature.bankapp.model.Customer;
@@ -38,7 +38,7 @@ public class EmployeeMenu extends Menu{
 			LoginForm loginForm = new LoginForm("Customer Login");
 			loginForm.captureDataAndPerformAction();
 			
-			CreateAccount createAcc = new CreateAccount("Account details");
+			NewAccount createAcc = new NewAccount("Account details");
 			createAcc.captureDataAndPerformAction();
 			
 			displayMenuLoop();

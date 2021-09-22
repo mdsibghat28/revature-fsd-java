@@ -3,6 +3,10 @@ package com.revature.bankapp.form;
 import java.sql.SQLException;
 import java.util.Scanner;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.revature.bankapp.dao.Util;
 import com.revature.bankapp.dao.impl.CustomerDaoImpl;
 import com.revature.bankapp.menu.CustomerMenu;
 import com.revature.bankapp.model.Customer;
@@ -12,6 +16,7 @@ public class LoginForm extends Form{
 	
 	private String userId;
 	private String password;
+	private static final Logger LOGGER = LoggerFactory.getLogger(Util.class);
 
 	public LoginForm(String name) {
 		super(name);
@@ -22,10 +27,10 @@ public class LoginForm extends Form{
 	@Override
 	public void captureData() {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("UserId : ");
+		LOGGER.info("UserId : ");
 		userId = sc.nextLine();
 
-		System.out.println("Password : ");
+		LOGGER.info("Password : ");
 		password = sc.nextLine();
 	}
 
@@ -41,8 +46,7 @@ public class LoginForm extends Form{
 			}
 			else if (customer.getPassword().equals(password)) {
 				success = true;
-				DataManager.setcurrentCustomer(customer);
-				System.out.println("Login Successfull\n");
+				LOGGER.info("Login Successfull\n");
 				System.out.println("Welcome " + customer.getName());
 			} else {
 				System.out.println("Invalid Username or Password");

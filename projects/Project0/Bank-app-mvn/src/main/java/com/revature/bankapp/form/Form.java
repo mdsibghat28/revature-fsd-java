@@ -1,19 +1,24 @@
 package com.revature.bankapp.form;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.revature.bankapp.dao.Util;
+
 public abstract class Form {
 	
 	protected String name;
 	protected boolean success;
-	
+	private static final Logger LOGGER = LoggerFactory.getLogger(Util.class);
 	public Form(String name) {
 		this.name = name;
 		success = false;
 	}
 
 	private void displayTitle() {
-		System.out.println("\n***********");
-		System.out.println(name);
-		System.out.println("***********\n");
+		LOGGER.info("\n***********");
+		LOGGER.info(name);
+		LOGGER.info("***********\n");
 	}
 	
 	public void captureDataAndPerformAction() {

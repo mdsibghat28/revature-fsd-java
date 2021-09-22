@@ -11,12 +11,12 @@ import com.revature.bankapp.dao.impl.AccountDaoImpl;
 import com.revature.bankapp.menu.CustomerMenu;
 import com.revature.bankapp.model.Customer;
 
-public class CreateAccount extends Form {
+public class NewAccount extends Form {
 
 	private String accountNumber;
 	private double initialAmount;
 
-	public CreateAccount(String name) {
+	public NewAccount(String name) {
 		super(name);
 
 	}

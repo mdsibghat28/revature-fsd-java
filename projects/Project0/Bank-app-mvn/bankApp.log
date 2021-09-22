@@ -1,1 +1,212 @@
 [main] 2021-09-17 17:38:57 INFO  com.revature.bankapp.dao.Util  - Start
+[main] 2021-09-21 15:00:36 INFO  com.revature.bankapp.dao.Util  - *****Connection to DataBase Successfull*****
+[main] 2021-09-21 15:01:13 INFO  com.revature.bankapp.dao.Util  - *****Connection to DataBase Successfull*****
+[main] 2021-09-21 15:01:13 INFO  com.revature.bankapp.dao.Util  - Account Created
+[main] 2021-09-21 19:06:23 INFO  com.revature.bankapp.dao.Util  - *****Connection to DataBase Successfull*****
+[main] 2021-09-21 19:06:34 INFO  com.revature.bankapp.dao.Util  - *****Connection to DataBase Successfull*****
+[main] 2021-09-21 19:06:39 INFO  com.revature.bankapp.dao.Util  - *****Connection to DataBase Successfull*****
+[main] 2021-09-21 19:06:58 INFO  com.revature.bankapp.dao.Util  - *****Connection to DataBase Successfull*****
+[main] 2021-09-21 19:07:58 INFO  com.revature.bankapp.dao.Util  - *****Connection to DataBase Successfull*****
+[main] 2021-09-21 19:11:43 INFO  com.revature.bankapp.dao.Util  - *****Connection to DataBase Successfull*****
+[main] 2021-09-21 19:13:16 INFO  com.revature.bankapp.dao.Util  - *****Connection to DataBase Successfull*****
+[main] 2021-09-21 19:19:15 INFO  com.revature.bankapp.dao.Util  - *****Connection to DataBase Successfull*****
+[main] 2021-09-21 19:19:23 INFO  com.revature.bankapp.dao.Util  - *****Connection to DataBase Successfull*****
+[main] 2021-09-21 19:20:18 INFO  com.revature.bankapp.dao.Util  - *****Connection to DataBase Successfull*****
+[main] 2021-09-21 19:20:23 INFO  com.revature.bankapp.dao.Util  - *****Connection to DataBase Successfull*****
+[main] 2021-09-22 10:56:29 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 10:56:31 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 10:59:24 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 10:59:24 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:00:09 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:00:09 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:01:15 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:04:02 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:05:17 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:05:18 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:06:29 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:06:30 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:06:51 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:06:52 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:09:10 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:09:11 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:11:21 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:11:22 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:12:51 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:14:32 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:14:33 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:14:33 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:16:20 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:16:21 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:16:21 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:16:21 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:29:20 INFO  com.revature.bankapp.dao.Util  - 
+***********
+[main] 2021-09-22 11:29:20 INFO  com.revature.bankapp.dao.Util  - Customer SignUp
+[main] 2021-09-22 11:29:20 INFO  com.revature.bankapp.dao.Util  - ***********
+
+[main] 2021-09-22 11:29:29 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:29:35 INFO  com.revature.bankapp.dao.Util  - 
+***********
+[main] 2021-09-22 11:29:35 INFO  com.revature.bankapp.dao.Util  - Customer Login
+[main] 2021-09-22 11:29:35 INFO  com.revature.bankapp.dao.Util  - ***********
+
+[main] 2021-09-22 11:29:35 INFO  com.revature.bankapp.dao.Util  - UserId : 
+[main] 2021-09-22 11:29:41 INFO  com.revature.bankapp.dao.Util  - Password : 
+[main] 2021-09-22 11:29:42 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:29:42 INFO  com.revature.bankapp.dao.Util  - 
+***********
+[main] 2021-09-22 11:29:42 INFO  com.revature.bankapp.dao.Util  - Customer Login
+[main] 2021-09-22 11:29:42 INFO  com.revature.bankapp.dao.Util  - ***********
+
+[main] 2021-09-22 11:29:42 INFO  com.revature.bankapp.dao.Util  - UserId : 
+[main] 2021-09-22 11:29:45 INFO  com.revature.bankapp.dao.Util  - Password : 
+[main] 2021-09-22 11:29:47 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:29:47 INFO  com.revature.bankapp.dao.Util  - Login Successfull
+
+[main] 2021-09-22 11:30:45 INFO  com.revature.bankapp.dao.Util  - 
+***********
+[main] 2021-09-22 11:30:45 INFO  com.revature.bankapp.dao.Util  - Account details
+[main] 2021-09-22 11:30:45 INFO  com.revature.bankapp.dao.Util  - ***********
+
+[main] 2021-09-22 11:31:00 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:31:00 INFO  com.revature.bankapp.dao.Util  - Account Created
+[main] 2021-09-22 11:31:25 INFO  com.revature.bankapp.dao.Util  - Account Number: 123456 selected
+[main] 2021-09-22 11:31:25 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:31:25 INFO  com.revature.bankapp.dao.Util  - Account Not Approved
+[main] 2021-09-22 11:32:50 INFO  com.revature.bankapp.dao.Util  - 
+***********
+[main] 2021-09-22 11:32:50 INFO  com.revature.bankapp.dao.Util  - Customer Login
+[main] 2021-09-22 11:32:50 INFO  com.revature.bankapp.dao.Util  - ***********
+
+[main] 2021-09-22 11:32:50 INFO  com.revature.bankapp.dao.Util  - UserId : 
+[main] 2021-09-22 11:32:53 INFO  com.revature.bankapp.dao.Util  - Password : 
+[main] 2021-09-22 11:32:55 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:32:56 INFO  com.revature.bankapp.dao.Util  - 
+***********
+[main] 2021-09-22 11:32:56 INFO  com.revature.bankapp.dao.Util  - Customer Login
+[main] 2021-09-22 11:32:56 INFO  com.revature.bankapp.dao.Util  - ***********
+
+[main] 2021-09-22 11:32:56 INFO  com.revature.bankapp.dao.Util  - UserId : 
+[main] 2021-09-22 11:33:00 INFO  com.revature.bankapp.dao.Util  - Password : 
+[main] 2021-09-22 11:33:02 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:33:02 INFO  com.revature.bankapp.dao.Util  - Login Successfull
+
+[main] 2021-09-22 11:33:08 INFO  com.revature.bankapp.dao.Util  - Account Number: 123456 selected
+[main] 2021-09-22 11:33:08 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:33:08 INFO  com.revature.bankapp.dao.Util  - Account Not Approved
+[main] 2021-09-22 11:33:17 INFO  com.revature.bankapp.dao.Util  - 
+***********
+[main] 2021-09-22 11:33:17 INFO  com.revature.bankapp.dao.Util  - Admin Login
+[main] 2021-09-22 11:33:17 INFO  com.revature.bankapp.dao.Util  - ***********
+
+[main] 2021-09-22 11:33:17 INFO  com.revature.bankapp.dao.Util  - Employee UserId: 
+[main] 2021-09-22 11:33:20 INFO  com.revature.bankapp.dao.Util  - Password: 
+[main] 2021-09-22 11:33:22 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:33:22 INFO  com.revature.bankapp.dao.Util  - Login Successfull
+
+[main] 2021-09-22 11:33:22 INFO  com.revature.bankapp.dao.Util  - Welcome admin
+[main] 2021-09-22 11:33:28 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:33:28 INFO  com.revature.bankapp.dao.Util  - Account Id: 19 Account Number: 123456, Balance:3000.0
+[main] 2021-09-22 11:33:28 INFO  com.revature.bankapp.dao.Util  - Approve (A) or Reject (R)
+[main] 2021-09-22 11:33:40 INFO  com.revature.bankapp.dao.Util  - 
+***********
+[main] 2021-09-22 11:33:40 INFO  com.revature.bankapp.dao.Util  - Customer Login
+[main] 2021-09-22 11:33:40 INFO  com.revature.bankapp.dao.Util  - ***********
+
+[main] 2021-09-22 11:33:40 INFO  com.revature.bankapp.dao.Util  - UserId : 
+[main] 2021-09-22 11:33:43 INFO  com.revature.bankapp.dao.Util  - Password : 
+[main] 2021-09-22 11:33:46 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:33:47 INFO  com.revature.bankapp.dao.Util  - Login Successfull
+
+[main] 2021-09-22 11:33:51 INFO  com.revature.bankapp.dao.Util  - Account Number: 123456 selected
+[main] 2021-09-22 11:33:51 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 11:33:51 INFO  com.revature.bankapp.dao.Util  - Account Not Approved
+[main] 2021-09-22 12:20:29 INFO  com.revature.bankapp.dao.Util  - 
+***********
+[main] 2021-09-22 12:20:29 INFO  com.revature.bankapp.dao.Util  - Customer Login
+[main] 2021-09-22 12:20:29 INFO  com.revature.bankapp.dao.Util  - ***********
+
+[main] 2021-09-22 12:20:29 INFO  com.revature.bankapp.dao.Util  - UserId : 
+[main] 2021-09-22 12:20:46 INFO  com.revature.bankapp.dao.Util  - Password : 
+[main] 2021-09-22 12:20:47 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 12:20:50 INFO  com.revature.bankapp.dao.Util  - Login Successfull
+
+[main] 2021-09-22 12:20:52 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 12:20:52 INFO  com.revature.bankapp.dao.Util  - 1) Account Number: 83087546892, Balance:31000.0
+[main] 2021-09-22 12:20:52 INFO  com.revature.bankapp.dao.Util  - 2) Account Number: 2314567890, Balance:6000.0
+[main] 2021-09-22 12:21:02 INFO  com.revature.bankapp.dao.Util  - Account Number: 2314567890 selected
+[main] 2021-09-22 12:21:02 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 12:21:03 INFO  com.revature.bankapp.dao.Util  - Enter Beneficiary Account Number: 
+[main] 2021-09-22 12:21:17 INFO  com.revature.bankapp.dao.Util  - Initiating Transfer......
+[main] 2021-09-22 12:21:17 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 12:21:17 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 12:21:17 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 12:21:17 INFO  com.revature.bankapp.dao.Util  -  Withdraw Successfull
+[main] 2021-09-22 12:21:17 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 12:21:17 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 12:21:17 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 12:21:46 INFO  com.revature.bankapp.dao.Util  - 
+***********
+[main] 2021-09-22 12:21:46 INFO  com.revature.bankapp.dao.Util  - Customer SignUp
+[main] 2021-09-22 12:21:46 INFO  com.revature.bankapp.dao.Util  - ***********
+
+[main] 2021-09-22 12:21:52 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 12:21:57 INFO  com.revature.bankapp.dao.Util  - 
+***********
+[main] 2021-09-22 12:21:57 INFO  com.revature.bankapp.dao.Util  - Customer Login
+[main] 2021-09-22 12:21:57 INFO  com.revature.bankapp.dao.Util  - ***********
+
+[main] 2021-09-22 12:21:57 INFO  com.revature.bankapp.dao.Util  - UserId : 
+[main] 2021-09-22 12:21:58 INFO  com.revature.bankapp.dao.Util  - Password : 
+[main] 2021-09-22 12:22:02 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 12:22:02 INFO  com.revature.bankapp.dao.Util  - 
+***********
+[main] 2021-09-22 12:22:02 INFO  com.revature.bankapp.dao.Util  - Customer Login
+[main] 2021-09-22 12:22:02 INFO  com.revature.bankapp.dao.Util  - ***********
+
+[main] 2021-09-22 12:22:02 INFO  com.revature.bankapp.dao.Util  - UserId : 
+[main] 2021-09-22 12:22:04 INFO  com.revature.bankapp.dao.Util  - Password : 
+[main] 2021-09-22 12:22:06 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 12:22:06 INFO  com.revature.bankapp.dao.Util  - Login Successfull
+
+[main] 2021-09-22 12:22:08 INFO  com.revature.bankapp.dao.Util  - 
+***********
+[main] 2021-09-22 12:22:08 INFO  com.revature.bankapp.dao.Util  - Account details
+[main] 2021-09-22 12:22:08 INFO  com.revature.bankapp.dao.Util  - ***********
+
+[main] 2021-09-22 12:22:20 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 12:22:20 INFO  com.revature.bankapp.dao.Util  - Account Created
+[main] 2021-09-22 12:22:37 INFO  com.revature.bankapp.dao.Util  - ******Thank You Visit Again*******
+[main] 2021-09-22 12:22:42 INFO  com.revature.bankapp.dao.Util  - 
+***********
+[main] 2021-09-22 12:22:42 INFO  com.revature.bankapp.dao.Util  - Admin Login
+[main] 2021-09-22 12:22:42 INFO  com.revature.bankapp.dao.Util  - ***********
+
+[main] 2021-09-22 12:22:42 INFO  com.revature.bankapp.dao.Util  - Employee UserId: 
+[main] 2021-09-22 12:22:48 INFO  com.revature.bankapp.dao.Util  - Password: 
+[main] 2021-09-22 12:22:51 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 12:22:51 INFO  com.revature.bankapp.dao.Util  - Invalid Username or Passworrd
+[main] 2021-09-22 12:22:51 INFO  com.revature.bankapp.dao.Util  - 
+***********
+[main] 2021-09-22 12:22:51 INFO  com.revature.bankapp.dao.Util  - Admin Login
+[main] 2021-09-22 12:22:51 INFO  com.revature.bankapp.dao.Util  - ***********
+
+[main] 2021-09-22 12:22:51 INFO  com.revature.bankapp.dao.Util  - Employee UserId: 
+[main] 2021-09-22 12:23:01 INFO  com.revature.bankapp.dao.Util  - Password: 
+[main] 2021-09-22 12:23:03 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 12:23:03 INFO  com.revature.bankapp.dao.Util  - Login Successfull
+
+[main] 2021-09-22 12:23:03 INFO  com.revature.bankapp.dao.Util  - Welcome admin
+[main] 2021-09-22 12:23:06 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 12:23:06 INFO  com.revature.bankapp.dao.Util  - Account Id: 19 Account Number: 123456, Balance:3000.0
+[main] 2021-09-22 12:23:06 INFO  com.revature.bankapp.dao.Util  - Approve (A) or Reject (R)
+[main] 2021-09-22 12:23:13 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 12:23:13 INFO  com.revature.bankapp.dao.Util  - Account Id: 20 Account Number: 1, Balance:3000.0
+[main] 2021-09-22 12:23:13 INFO  com.revature.bankapp.dao.Util  - Approve (A) or Reject (R)
+[main] 2021-09-22 12:23:29 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 12:24:14 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 12:24:16 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 12:24:28 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 12:24:30 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 12:24:30 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[main] 2021-09-22 12:24:30 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****

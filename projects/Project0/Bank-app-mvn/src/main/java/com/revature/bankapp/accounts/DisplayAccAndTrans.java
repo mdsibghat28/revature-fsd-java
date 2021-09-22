@@ -4,24 +4,25 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.revature.bankapp.dao.Util;
 import com.revature.bankapp.dao.impl.AccountDaoImpl;
-import com.revature.bankapp.menu.CustomerMenu;
 
 public class DisplayAccAndTrans {
-
+	private static final Logger LOGGER = LoggerFactory.getLogger(Util.class);
 	public static ArrayList<Account> accountsList() {
 
 		AccountDaoImpl accdao = new AccountDaoImpl();
 		try {
 			List<Account> accounts = accdao.accountList();
 			for (int i = 0; i < accounts.size(); i++) {
-				System.out.println((i + 1) + ") " + accounts.get(i).print());
+				LOGGER.info((i + 1) + ") " + accounts.get(i).print());
 			}
-			CustomerMenu cm = new CustomerMenu("Customer Menu");
-			cm.displayMenuLoop();
 		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("Cannot display accounts");
+			LOGGER.info("Cannot display accounts");
 		}
 		return null;
 	}
@@ -32,14 +33,11 @@ public class DisplayAccAndTrans {
 		try {
 			List<Transactions> transaction = accdao.transactionList();
 			for (int i = 0; i < transaction.size(); i++) {
-				System.out.println((i + 1) + ") " + transaction.get(i).print());
+				LOGGER.info((i + 1) + ") " + transaction.get(i).print());
 			}
-			CustomerMenu cm = new CustomerMenu("Customer Menu");
-			
-			cm.displayMenuLoop();
 		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("Cannot display accounts");
+			LOGGER.info("Cannot display accounts");
 		}
 		return null;
 	}

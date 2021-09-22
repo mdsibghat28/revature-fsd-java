@@ -3,6 +3,10 @@ package com.revature.bankapp.accounts;
 import java.sql.SQLException;
 import java.util.Scanner;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.revature.bankapp.dao.Util;
 import com.revature.bankapp.dao.impl.AccountDaoImpl;
 
 public class Account {
@@ -15,6 +19,9 @@ public class Account {
 	private char approved;
 	boolean success = true;
 	Scanner sc = new Scanner(System.in);
+	private static final Logger LOGGER = LoggerFactory.getLogger(Util.class);
+	
+	AccountDaoImpl accdao = new AccountDaoImpl();
 	
 	public Account(String accountNumber, double initialAmount) {
 		super();
@@ -91,19 +98,19 @@ public class Account {
 	public double withdraw(double withdrawAmount) {
 		while (success) {
 			if (withdrawAmount < 0) {
-				System.out.println("Enter Amount greater than 0");
+				LOGGER.info("Enter Amount greater than 0");
 			} else if (withdrawAmount <= initialAmount) {
 				initialAmount -= withdrawAmount;
 				success = false;
 				try {
-					AccountDaoImpl.insert(new Transactions('D', withdrawAmount));
+					accdao.insert(new Transactions('D', withdrawAmount));
 					accdao.update(this);
-					System.out.println("Successfull");
+					LOGGER.info(" Withdraw Successfull");
 				} catch (SQLException e) {
 					e.printStackTrace();
 				}
 			} else {
-				System.out.println("Insufficient funds");
+				LOGGER.info("Insufficient funds");
 			}
 
 		}
@@ -113,14 +120,14 @@ public class Account {
 	public double deposit(double depositAmount) {
 		while (success) {
 			if (depositAmount < 0) {
-				System.out.println("Enter Amount greater than 0");
+				LOGGER.info("Enter Amount greater than 0");
 			} else {
 				initialAmount += depositAmount;
 				success = false;
 				try {
 					accdao.insert(new Transactions('C', depositAmount));
 					accdao.update(this);
-					System.out.println("Successfull");
+					LOGGER.info("Successfull");
 				} catch (SQLException e) {
 					e.printStackTrace();
 				}

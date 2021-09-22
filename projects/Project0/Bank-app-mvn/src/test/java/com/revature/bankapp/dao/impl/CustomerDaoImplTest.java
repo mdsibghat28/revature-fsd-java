@@ -6,20 +6,33 @@ import java.sql.SQLException;
 
 import org.junit.jupiter.api.Test;
 
-import com.revature.bankapp.dao.CustomerDao;
 import com.revature.bankapp.model.Customer;
 
 class CustomerDaoImplTest {
+	
+	Customer customer = new Customer("Sibghat", "sibghat123", "123456");
+	CustomerDaoImpl dao = new CustomerDaoImpl();
+
 
 	@Test
 	void testCreate() {
-		CustomerDao dao = new CustomerDaoImpl();
-		Customer customer = new Customer("sib", "sib123", "123", null);
 		try {
 			dao.create(customer);
 		} catch (SQLException e) {
 			e.printStackTrace();
 			fail("Not yet implemented");
+		}
+
+	}
+	
+	@Test 
+	void testGetCustomer() {
+		try {
+
+			dao.getCustomerUserId("sibghat123");
+		} catch (SQLException e) {
+			e.printStackTrace();
+			fail("No data found");
 		}
 
 	}

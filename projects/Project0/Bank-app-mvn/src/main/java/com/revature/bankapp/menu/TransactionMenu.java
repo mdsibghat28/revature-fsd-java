@@ -3,17 +3,22 @@ package com.revature.bankapp.menu;
 import java.sql.SQLException;
 import java.util.Scanner;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.revature.bankapp.accounts.DisplayAccAndTrans;
+import com.revature.bankapp.dao.Util;
 import com.revature.bankapp.dao.impl.AccountDaoImpl;
 
-public class WithdrawDeposit extends Menu{
+public class TransactionMenu extends Menu{
+	private static final Logger LOGGER = LoggerFactory.getLogger(Util.class);
 	
 	public static String accNumber;
 	public static String transferAccNum;
 	Scanner sc = new Scanner(System.in);
 	CustomerMenu cm = new CustomerMenu("Customer Menu");
 	
-	public WithdrawDeposit(String name) {
+	public TransactionMenu(String name) {
 		super(name);
 		addMenuItems("Withdraw");
 		addMenuItems("Deposit");
@@ -27,7 +32,7 @@ public class WithdrawDeposit extends Menu{
 	public String getAccount() {
 		System.out.println("Enter Account number to make transaction: ");
 		accNumber = sc.nextLine();
-		System.out.println("Account Number: " + accNumber);
+		LOGGER.info("Account Number: " + accNumber + " selected");
 		return accNumber;
 	}
 
@@ -73,7 +78,7 @@ public class WithdrawDeposit extends Menu{
 		case 4:
 			try {
 				double balance = accdao.currentAccount().getInitialAmount();
-				System.out.println("Balance: " + balance);
+				LOGGER.info("Balance: " + balance);
 			} catch (SQLException e1) {
 				e1.printStackTrace();
 			}
@@ -81,32 +86,34 @@ public class WithdrawDeposit extends Menu{
 			break;
 		
 		case 5:
-			System.out.println("Enter Account Number of receiver: ");
+			LOGGER.info("Enter Beneficiary Account Number: ");
 			transferAccNum = sc.nextLine();
 			System.out.println("Enter amount to transfer: ");
 			double amount = sc.nextDouble();
 			try {
+				LOGGER.info("Initiating Transfer......");
 				accdao.currentAccount().withdraw(amount);
-				System.out.println("Initiated");
 			} catch (SQLException e) {
 				e.printStackTrace();
-				System.out.println("withdraw failed");
+				LOGGER.info("Transfer Failed (Amount not Debited)");
 			}
 			try {
 				accdao.transferAccount().transfer(amount);
 			} catch (SQLException e) {
 				e.printStackTrace();
-				System.out.println("deposit failed");
+				LOGGER.info("Transfer Failed (Amount Debited)");
 			}
 			cm.displayMenuLoop();
 			break;
 			
 		case 6:
 			cm.displayMenuLoop();
+			break;
 			
 		case 7:
 			MainMenu mm = new MainMenu("Main Menu");
 			mm.displayMenuLoop();
+			break;          
 		}
 		
 	}

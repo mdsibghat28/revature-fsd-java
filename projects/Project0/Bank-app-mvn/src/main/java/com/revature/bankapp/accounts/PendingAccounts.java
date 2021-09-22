@@ -4,6 +4,10 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.revature.bankapp.dao.Util;
 import com.revature.bankapp.dao.impl.AccountDaoImpl;
 
 public class PendingAccounts {
@@ -13,16 +17,17 @@ public class PendingAccounts {
 	public void viewPending(){
 		
 		AccountDaoImpl accdao = new AccountDaoImpl();
+		final Logger LOGGER = LoggerFactory.getLogger(Util.class);
 		Scanner sc = new Scanner(System.in);
 		
 		try {
 			List<Account> account = accdao.pendingList();
 			for(int i = 0; i < account.size(); i++) {
-				System.out.println(account.get(i).printId());
+				LOGGER.info(account.get(i).printId());
 				int tempId = account.get(i).getId();
 				success = true;
 				while(success) {
-					System.out.println("Approve (A) or Reject (R)");
+					LOGGER.info("Approve (A) or Reject (R)");
 					char choice = sc.nextLine().charAt(0);
 					if(choice == 'A') {
 						accdao.approveAccount(tempId);
@@ -31,7 +36,7 @@ public class PendingAccounts {
 						accdao.rejectAccount(tempId);
 						success = false;
 					} else {
-						System.out.println("Enter valid input");
+						LOGGER.info("Enter valid input");
 					}
 				}
 

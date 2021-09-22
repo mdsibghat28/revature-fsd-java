@@ -6,17 +6,21 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.revature.bankapp.accounts.Account;
 import com.revature.bankapp.accounts.Transactions;
 import com.revature.bankapp.dao.AccountDao;
 import com.revature.bankapp.dao.Util;
-import com.revature.bankapp.menu.WithdrawDeposit;
+import com.revature.bankapp.menu.TransactionMenu;
 
 public class AccountDaoImpl implements AccountDao {
 
 	public static int currentAccountId;
 	public static int transferAccountId;
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(Util.class);
 
 	@Override
 	public void create(Account account) throws SQLException {
@@ -28,6 +32,7 @@ public class AccountDaoImpl implements AccountDao {
 			statement.setInt(3, CustomerDaoImpl.currentCustomerId);
 			statement.setString(4, String.valueOf('N'));
 			statement.executeUpdate();
+			LOGGER.info("Account Created");
 		}
 
 	}
@@ -57,7 +62,7 @@ public class AccountDaoImpl implements AccountDao {
 		try (Connection connection = Util.getConnection()) {
 			String sql = "select * from account where account_number = ?";
 			PreparedStatement statement = connection.prepareStatement(sql);
-			statement.setString(1, WithdrawDeposit.accNumber);
+			statement.setString(1, TransactionMenu.accNumber);
 			ResultSet resultSet = statement.executeQuery();
 			while (resultSet.next()) {
 				currentAccountId = resultSet.getInt("id");
@@ -70,7 +75,7 @@ public class AccountDaoImpl implements AccountDao {
 		return account;
 	}
 
-	public static void insert(Transactions transaction) throws SQLException {
+	public void insert(Transactions transaction) throws SQLException {
 		try (Connection connection = Util.getConnection()) {
 			String sql = "insert into transaction (type, amount, account_id) values (?, ?, ?)";
 			PreparedStatement statement = connection.prepareStatement(sql);
@@ -136,7 +141,7 @@ public class AccountDaoImpl implements AccountDao {
 		try (Connection connection = Util.getConnection()) {
 			String sql = "select * from account where account_number = ?";
 			PreparedStatement statement = connection.prepareStatement(sql);
-			statement.setString(1, WithdrawDeposit.transferAccNum);
+			statement.setString(1, TransactionMenu.transferAccNum);
 			ResultSet resultSet = statement.executeQuery();
 			while (resultSet.next()) {
 				transferAccountId = resultSet.getInt("id");
