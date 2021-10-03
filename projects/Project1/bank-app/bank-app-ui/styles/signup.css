@@ -1,0 +1,20 @@
+body {
+    background-image: url(../images/pattern4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* color: whitesmoke; */
+    }
+
+    form {
+        padding: 20px;
+        background-color: rgba(8, 19, 117, 0.822);
+        border-radius: 10px;
+    }
+
+    .invalid-feedback {
+        color: rgb(255, 0, 0);
+    }
+
+    #form {
+        margin-top: 40px;
+    }

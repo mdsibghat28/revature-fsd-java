@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/customer.css">
+    <title>Evos Customer</title>
+</head>
+<body>
+    <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md sticky-top" style="background-color: rgb(23, 5, 104);">
+        <div class="container-fluid">
+         <a href="#" class="navbar-brand">
+             <img src="images/brandLogo.png" alt=""  class="" width="40" height="40">
+            <span> Evos Bank </span>
+         </a>
+         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navLinks">
+             <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navLinks">
+             <ul class="navbar-nav ms-auto">
+                 <li class="nav-items">
+                     <a href="customer.html" class="nav-link active">Home</a>
+                 </li>
+                 <li class="nav-items">
+                     <a href="#" class="nav-link">Customer Support</a>
+                 </li>
+                 <!-- <li class="nav-items">
+                     <a href="#" class="nav-link">Services</a>
+                 </li> -->
+                 <li class="nav-item dropdown">
+                     <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Services</a>
+                     <ul class="dropdown-menu">
+                         <li><a href="" class="dropdown-item">New Account</a></li>
+                         <li><a href="" class="dropdown-item">View Accounts</a></li>
+                     </ul>
+                 </li>
+                 <li class="nav-items">
+                     <a href="index.html" class="nav-link" >LogOut</a>
+                 </li>
+             </ul>
+         </div>
+     </div>
+     </nav>
+        <div class="container-fluid" id="cardContainer">
+            <div class="row" id="cardContents">
+                <div class="card" style="width: 18rem;">
+                    <!-- <img src="images/newCustomer2.jpg" class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                      <h5 class="card-title">Customer Details</h5>
+                      <p class="card-text">
+                          <ul id="customerDetails">
+                              <li>First Name : First Name</li>
+                              <li>Last Name : Last Name</li>
+                              <li>User Id : Email</li>
+                              <li>Address : Address</li>
+                              <li>State : State</li>
+                              <li>City : City</li>
+                              <li>Pin Code : Zip</li>
+                          </ul>
+                      </p>
+                      <a href="#" class="btn btn-info">Edit Details</a>
+                    </div>
+                  </div>
+                  <div class="card" style="width: 18rem;">
+                    <!-- <img src="images/excistingCustomer2.jpg" class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                      <h5 class="card-title">Apply New Account</h5>
+                      <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore voluptatem rerum adipisci facere consectetur ipsam dignissimos, ducimus cumque numquam et modi eum voluptatibus reiciendis! Ea lorem</p>
+                      <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Apply</a>
+                    </div>
+                  </div>
+                  <div class="card" style="width: 18rem;">
+                    <!-- <img src="images/employee2.jpg" class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                      <h5 class="card-title">Accounts</h5>
+                      <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, reprehenderit eligendi, perferendis necessitatibus nostrum eaque dolore ullam saepe alias, cum atque dolor earum dignissimos ad!</p>
+                      <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Login</a>
+                    </div>
+                 </div>
+                 <div class="card" style="width: 18rem;">
+                    <!-- <img src="images/support1.jpg" class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                      <h5 class="card-title">Log Out</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora quos, at obcaecati minus id similique aut eligendi fugiat ducimus iste mollitia! Deleniti totam nisi fugit.</p>
+                      <a href="#" class="btn btn-info">Reach us</a>
+                    </div>
+                 </div>
+            </div>
+        </div>
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-md ">
+              <div class="modal-content" >
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel" >Account Registration</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation" id="newAccount" novalidate>
+                        <div class="row mb-3">
+                          <label for="accountNumber" class="col-sm-4 col-form-label">Account Number</label>
+                          <div class="col-sm-8">
+                            <input type="text" class="form-control" id="accountNumber" required>
+                            <div class="invalid-feedback">Please enter Account Number</div>
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                          <label for="initialDeposit" class="col-sm-4 col-form-label">Deposit Amount</label>
+                          <div class="col-sm-8">
+                            <input type="number" class="form-control" id="initialDeposit" required>
+                            <div class="invalid-feedback">Please enter deposit</div>
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="accountType" class="col-sm-5 col-mb-3 col-form-label">Account Type</label>
+                            <div class="col-sm-7 col-mb-3 mb-3">
+                                <select name="accType" id="accountType" class="form-select">
+                                    <option>-- Select Type --</option>
+                                    <option value="savings">Savings</option>
+                                    <option value="salary">Salary</option>
+                                    <option value="credit">Credit</option>
+                                    <option value="current">Current</option>
+                                </select>
+                                <div class="invalid-feedback">Select account type</div>
+                            </div>
+                            <label for="branch" class="col-sm-5 col-mb-3 col-form-label">Branch</label>
+                            <div class="col-sm-7 col-mb-3">
+                                <select name="branch" id="branch" class="form-select">
+                                    <option>-- Branch--</option>
+                                    <option value="savings">Chennai</option>
+                                    <option value="salary">Banglore</option>
+                                    <option value="credit">Delhi</option>
+                                    <option value="current">Mumbai</option>
+                                </select>
+                                <div class="invalid-feedback">Select branch</div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Details</button>
+                      </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+     <section class="footer1">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col col-6 col-lg-4 social-media-links">
+                    <span>FOLLOW US.</span>
+                    <div class="social-icons">
+                        <ul id="links">
+                            <li class="icons"> <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook" style="font-size:23px;"></i></a></li>
+                            <li class="icons"><a href="https://twitter.com" target="_blank"><i class="fa fa-twitter" style="font-size:23px;"></i></a></li>
+                           <li class="icons"><a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin" style="font-size:23px;"></i></a></li>
+                           <li class="icons"><a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram" style="font-size:23px;"></i></a> </li>
+                           <li class="icons"><a href="https://www.youtube.com" target="_blank" class="youtube-icon"><i class="fa fa-youtube-play" style="font-size:23px;"></i></a></li>
+                       </ul>
+                    </div>
+                </div>
+                <div class="col col-6 col-lg-4">
+                   <ul>
+                       <li>CONTACT US</li>
+                    <li class=""><i class="fa fa-phone" style="font-size:23px;"></i><span> +91-951368247</span></li>
+                    <li class=""><i class="fa fa-envelope" style="font-size:23px;"></i><span> evos@gmail.com</span></li>
+                   </ul>
+                </div>
+                <div class="col col-12 col-lg-4" id="address">
+                    <ul>
+                        <li id="footer-contacts" style="letter-spacing: 0.7px; font-size: 25px;"> 
+                            ADDRESS <br>
+                        </li>
+                        <li> 
+                            <span href="" class="sub-head">Silicon Valley,<br> 
+                                Bay Area,<br> Northern California,<br> 
+                                United States.<br> </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="copyright">
+                <span class="copyright"> <i class="fa fa-copyright"></i> 2021  All rights reserved. </span>
+           </div>
+        </div>
+    </section>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

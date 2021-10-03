@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="CSS/signup.css">
+    <title>Customer Registration</title>
+</head>
+<body>
+    <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md sticky-top" style="background-color: rgb(23, 5, 104);">
+        <div class="container-fluid">
+         <a href="index.html" class="navbar-brand">
+             <img src="images/brandLogo.png" alt=""  class="" width="40" height="40">
+            <span> Evos Bank </span>
+         </a>
+         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navLinks">
+             <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navLinks">
+             <ul class="navbar-nav ms-auto">
+                 <li class="nav-items">
+                     <a href="index.html" class="nav-link">Home</a>
+                 </li>
+                 <li class="nav-items">
+                     <a href="#" class="nav-link">About Us</a>
+                 </li>
+                 <li class="nav-items">
+                     <a href="#" class="nav-link">Services</a>
+                 </li>
+                 <!-- <li class="nav-item dropdown">
+                     <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Login</a>
+                     <ul class="dropdown-menu">
+                         <li><a href="#" class="dropdown-item">Customer Login</a></li>
+                         <li><a href="#" class="dropdown-item">Employee Login</a></li>
+                     </ul>
+                 </li> -->
+                 <li class="nav-items">
+                     <a href="signup.html" class="nav-link active">New User</a>
+                 </li>
+             </ul>
+         </div>
+     </div>
+     </nav>
+     <section>
+         <div class="container-fluid" id="form">
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="col-md-6">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                            <div class="invalid-feedback">Please Enter First Name</div>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" required>
+                            <div class="invalid-feedback"> Please Enter Last Name</div>
+                          </div>
+                        <div class="col-md-6">
+                          <label for="email" class="form-label">Email</label>
+                          <input type="email" class="form-control" id="email" placeholder="abc@example.com" required>
+                          <div class="invalid-feedback">User name cannot be empty</div>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="password" class="form-label">Password</label>
+                          <input type="password" class="form-control" id="password" required>
+                          <div class="invalid-feedback">Password Cannot be empty</div>
+                        </div>
+                        <div class="col-12">
+                          <label for="address" class="form-label">Address</label>
+                          <input type="text" class="form-control" id="address" placeholder="" required>
+                          <div class="invalid-feedback">Please provide valid address</div>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="city" class="form-label">City</label>
+                          <input type="text" class="form-control" id="city" required>
+                          <div class="invalid-feedback">Enter City</div>
+                        </div>
+                        <div class="col-md-4">
+                          <label for="state" class="form-label">State</label>
+                          <select id="state" class="form-select" required>
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                          </select>
+                          <div class="invalid-feedback">Please select a valid state</div>
+                        </div>
+                        <div class="col-md-2">
+                          <label for="zip" class="form-label">Pin Code</label>
+                          <input type="text" class="form-control" id="zip" required>
+                          <div class="invalid-feedback">Please provide a valid pin code</div>
+                        </div>
+                        <div class="col-12">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                            <label class="form-check-label" for="gridCheck">
+                              *Agree Terms & Conditions.
+                            </label>
+                            <div class="invalid-feedback">You must agree before submitting</div>
+                          </div>
+                        </div>
+                        <div class="col-12" style="text-align: center;">
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                      </form>
+                </div>
+            </div>
+         </div>
+     </section>
+    <script src="javaScript/formValidation.js"></script>
+    <script src="javaScript/signup.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+body{
+    background-image: url(../images/pattern8.jpg);
+}
+
+form {
+    padding: 20px;
+    background-color: rgba(154, 200, 221, 0.87);
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <title>Object</title>
+    </head>
+    <body>
+        <h1>Employee Details</h1>
+        <div>
+            <table border="5">
+                <tr>
+                    <td>Name</td>
+                    <td id="name"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td id="gender"></td>
+                </tr>
+                <tr>
+                    <td>Salary</td>
+                    <td id="salary"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            </table>
+            <table class="table" style="text-align: center; font-family: segoe script;" >
+                <tr class="table-primary" style="font-size: 20px;">
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Salary</th>
+                </tr>
+                <tbody id = "table-body" style="text-align: center; font-family: Segoe Print ;">
+
+                </tbody>
+            </table>
+        </div>
+
+        <script>
+            var male = {
+                code: "M",
+                name: "Male"
+            };
+            var female = {
+                code:"F",
+                name: "Female"
+            };
+            var employee = {
+                name: "Jhon",
+                gender: male,
+                salary: 1000
+            };
+            var employee1 = {
+                name: "Stella",
+                gender: female,
+                salary: 10000
+            };
+            
+            document.getElementById("name").innerText = employee.name;
+            document.getElementById("gender").innerText = employee.gender.code;
+            document.getElementById("salary").innerText = employee.salary;
+
+            var employees = [employee, employee1, employee];
+            let innerHTML = ""
+            for (let employee of employees){
+                // innerHTML += "<tr>" 
+                // innerHTML += "<td>" + employee.name + "</td>";
+                // innerHTML += "<td>" + employee.gender.code + "</td>";
+                // innerHTML += "<td>" + employee.salary + "</td>";
+                // innerHTML += "</tr>"
+                innerHTML += `<tr>
+                    <td>${employee.name}</td>
+                    <td>${employee.gender.code}</td>
+                    <td>${employee.salary}</td>
+                    </tr>`
+            };
+            document.getElementById("table-body").innerHTML = innerHTML;
+        </script>
+    </body>
+</html>
