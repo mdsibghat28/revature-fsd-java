@@ -26,8 +26,9 @@ public class EmployeeDaoImpl implements EmployeeDao{
 			while(resultSet.next()) {
 				Customer customerTemp = new Customer();
 				customerTemp.setCustomerId(resultSet.getInt("id"));
-				customerTemp.setName(resultSet.getString("name"));
-				customerTemp.setUserId(resultSet.getString("user_id"));
+				customerTemp.setFirstName(resultSet.getString("first_name"));
+				customerTemp.setLastName(resultSet.getString("last_name"));
+				customerTemp.setEmail(resultSet.getString("email"));
 				customerList.add(customerTemp);
 			}
 		return customerList;
@@ -36,23 +37,24 @@ public class EmployeeDaoImpl implements EmployeeDao{
 
 	@Override
 	public List<Account> viewAccount() throws SQLException {
-		List<Account> accountList = new ArrayList<>();
-		try (Connection connection = Util.getConnection()) {
-			String sql = "select c.id, c.name, account_number, initial_amount from account\r\n" + 
-					"inner join customer c on customer_id = c.id";
-			PreparedStatement statement = connection.prepareStatement(sql);
-			ResultSet resultSet = statement.executeQuery();
-			while (resultSet.next()) {
-				Account accountTemp = new Account();
-				accountTemp.setCustomerId(resultSet.getInt("id"));
-				accountTemp.setName(resultSet.getString("name"));
-				accountTemp.setAccountNumber(resultSet.getString("account_number"));
-				accountTemp.setInitialAmount(resultSet.getDouble("initial_amount"));
-				accountList.add(accountTemp);
-
-			}
-		}
-		return accountList;
+//		List<Account> accountList = new ArrayList<>();
+//		try (Connection connection = Util.getConnection()) {
+//			String sql = "select c.id, c.first_name, account_number, balance from account\r\n" + 
+//					"inner join customer c on customer_id = c.id";
+//			PreparedStatement statement = connection.prepareStatement(sql);
+//			ResultSet resultSet = statement.executeQuery();
+//			while (resultSet.next()) {
+//				Account accountTemp = new Account();
+//				accountTemp.setCustomerId(resultSet.getInt("id"));
+//				accountTemp.setName(resultSet.getString("first_name"));
+//				accountTemp.setAccountNumber(resultSet.getString("account_number"));
+//				accountTemp.setInitialAmount(resultSet.getDouble("initial_amount"));
+//				accountList.add(accountTemp);
+//
+//			}
+//		}
+//		return accountList;
+		return null;
 	}
 
 	public List<Transactions> viewTransaction() throws SQLException {

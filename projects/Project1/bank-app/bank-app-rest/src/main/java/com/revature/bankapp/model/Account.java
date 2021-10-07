@@ -1,6 +1,5 @@
 package com.revature.bankapp.model;
 
-import java.sql.SQLException;
 import java.util.Scanner;
 
 import org.slf4j.Logger;
@@ -13,8 +12,9 @@ public class Account {
 	
 	private int id;
 	private String accountNumber;
-	private double initialAmount;
-	private String name;
+	private double balance;
+	private String firstName;
+	private String lastName;
 	private int customerId;
 	private char approved;
 	boolean success = true;
@@ -26,13 +26,20 @@ public class Account {
 	public Account(String accountNumber, double initialAmount) {
 		super();
 		this.accountNumber = accountNumber;
-		this.initialAmount = initialAmount;
+		this.balance = initialAmount;
 	}
 
 	public Account() {
 
 	}
 	
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 	
 	public char getApproved() {
 		return approved;
@@ -50,12 +57,12 @@ public class Account {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setFirstName(String name) {
+		this.firstName = name;
 	}
 
 	public int getCustomerId() {
@@ -70,12 +77,12 @@ public class Account {
 		return accountNumber;
 	}
 
-	public double getInitialAmount() {
-		return initialAmount;
+	public double getBalance() {
+		return balance;
 	}
 
-	public void setInitialAmount(double initialAmount) {
-		this.initialAmount = initialAmount;
+	public void setBalance(double initialAmount) {
+		this.balance = initialAmount;
 	}
 
 	public void setAccountNumber(String accountNumber) {
@@ -83,17 +90,20 @@ public class Account {
 	}
 	
 	public String printId() {
-		return "Account Id: "+ id +" Account Number: " + accountNumber + ", Balance:" + initialAmount;
+		return "Account Id: "+ id +" Account Number: " + accountNumber + ", Balance:" + balance;
 	}
 	
 	public String print() {
-		return "Account Number: " + accountNumber + ", Balance:" + initialAmount;
+		return "Account Number: " + accountNumber + ", Balance:" + balance;
 	}
 
 	@Override
 	public String toString() {
-		return "Customer Id: " + customerId + " Name: " + name + " Account Number: " + accountNumber + ", Balance:" + initialAmount;
+		return "Account Number: " + accountNumber + ", Balance: " + balance + ", FirstName: " + firstName
+				+ ", Last Name: " + lastName + ", Customer Id: " + customerId;
 	}
+
+
 
 //	public double withdraw(double withdrawAmount) {
 //		while (success) {

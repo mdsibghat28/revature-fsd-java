@@ -6,13 +6,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.revature.bankapp.model.Account;
-import com.revature.bankapp.model.Transactions;
 import com.revature.bankapp.dao.AccountDao;
 import com.revature.bankapp.dao.Util;
+import com.revature.bankapp.exception.AppException;
+import com.revature.bankapp.model.Account;
+import com.revature.bankapp.model.Transactions;
 
 public class AccountDaoImpl implements AccountDao {
 
@@ -22,16 +24,19 @@ public class AccountDaoImpl implements AccountDao {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Util.class);
 
 	@Override
-	public void create(Account account) throws SQLException {
+	public void create(Account account) throws AppException {
 		try (Connection connection = Util.getConnection()) {
-			String sql = "insert into account (account_number, initial_amount, customer_id, approved) values (?, ?, ?, ?)";
+			String sql = "insert into account (account_number, balance, customer_id) values (?, ?, ?)";
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setString(1, account.getAccountNumber());
-			statement.setDouble(2, account.getInitialAmount());
+			statement.setDouble(2, account.getBalance());
 			statement.setInt(3, CustomerDaoImpl.currentCustomerId);
-			statement.setString(4, String.valueOf('N'));
+//			statement.setString(4, String.valueOf('N'));
 			statement.executeUpdate();
 			LOGGER.info("Account Created");
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new AppException(e);
 		}
 
 	}
@@ -46,7 +51,7 @@ public class AccountDaoImpl implements AccountDao {
 			while (resultSet.next()) {
 				Account account = new Account();
 				account.setAccountNumber(resultSet.getString("account_number"));
-				account.setInitialAmount(resultSet.getDouble("initial_amount"));
+				account.setBalance(resultSet.getDouble("balance"));
 				accountList.add(account);
 
 			}
@@ -67,7 +72,7 @@ public class AccountDaoImpl implements AccountDao {
 			while (resultSet.next()) {
 				currentAccountId = resultSet.getInt("id");
 				String accNumber = resultSet.getString("account_number");
-				Double initialAmount = resultSet.getDouble("initial_Amount");
+				Double initialAmount = resultSet.getDouble("balance");
 
 				account = new Account(accNumber, initialAmount);
 			}
@@ -103,7 +108,7 @@ public class AccountDaoImpl implements AccountDao {
 		try (Connection connection = Util.getConnection()) {
 			String sql = "update account set initial_amount = ? where id = ?";
 			PreparedStatement statement = connection.prepareStatement(sql);
-			statement.setDouble(1, account.getInitialAmount());
+			statement.setDouble(1, account.getBalance());
 			statement.setInt(2, currentAccountId);
 			statement.executeUpdate();
 		}
@@ -130,7 +135,7 @@ public class AccountDaoImpl implements AccountDao {
 		try (Connection connection = Util.getConnection()) {
 			String sql = "update account set initial_amount = ? where id = ?";
 			PreparedStatement statement = connection.prepareStatement(sql);
-			statement.setDouble(1, account.getInitialAmount());
+			statement.setDouble(1, account.getBalance());
 			statement.setInt(2, transferAccountId);
 			statement.executeUpdate();
 		}
@@ -186,7 +191,7 @@ public class AccountDaoImpl implements AccountDao {
 				Account account = new Account();
 				account.setId(resultSet.getInt("id"));
 				account.setAccountNumber(resultSet.getString("account_number"));
-				account.setInitialAmount(resultSet.getDouble("initial_amount"));
+				account.setBalance(resultSet.getDouble("initial_amount"));
 				pendingList.add(account);
 
 			}
