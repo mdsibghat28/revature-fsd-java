@@ -1,0 +1,53 @@
+body{
+    background: #edf1f5;
+}
+.card {
+    position: relative;
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: rgb(203, 225, 238);
+    background-clip: border-box;
+    margin-top: 10px;
+    border-radius: 25px;
+}
+ul.list-style-none {
+    margin: 0;
+    padding: 0;
+}
+ul.list-style-none li {
+    list-style: none;
+}
+
+.font-light {
+    font-weight: 300;
+}
+.font-20 {
+    font-size: 25px !important;
+}
+ul.list-style-none li a {
+    color: #313131;
+    padding: 8px 0;
+    display: block;
+    text-decoration: none;
+}
+
+.card-body button {
+    width: 49%;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.card-body {
+    justify-content: space-around;
+}
+
+#accountCards {
+    margin: 20px 0 200px 0;
+}
+
+.balance{
+    font-weight: 600;
+}
