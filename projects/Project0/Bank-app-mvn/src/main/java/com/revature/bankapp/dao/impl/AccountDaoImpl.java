@@ -46,6 +46,7 @@ public class AccountDaoImpl implements AccountDao {
 			ResultSet resultSet = statement.executeQuery();
 			while (resultSet.next()) {
 				Account account = new Account();
+				account.setId(resultSet.getInt("id"));
 				account.setAccountNumber(resultSet.getString("account_number"));
 				account.setInitialAmount(resultSet.getDouble("initial_amount"));
 				accountList.add(account);

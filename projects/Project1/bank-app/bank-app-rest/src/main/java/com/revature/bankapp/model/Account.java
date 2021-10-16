@@ -10,8 +10,8 @@ import com.revature.bankapp.dao.impl.AccountDaoImpl;
 
 public class Account {
 	
-	private int id;
-	private String accountNumber;
+	private int accountId;
+	private int accountNumber;
 	private double balance;
 	private String firstName;
 	private String lastName;
@@ -23,11 +23,22 @@ public class Account {
 	
 	AccountDaoImpl accdao = new AccountDaoImpl();
 	
-	public Account(String accountNumber, double initialAmount) {
+	public Account(int accountNumber, double initialAmount) {
 		super();
 		this.accountNumber = accountNumber;
 		this.balance = initialAmount;
 	}
+	
+	
+
+	public Account(int id, int accountNumber, double balance) {
+		super();
+		this.accountId = id;
+		this.accountNumber = accountNumber;
+		this.balance = balance;
+	}
+
+
 
 	public Account() {
 
@@ -49,12 +60,12 @@ public class Account {
 		this.approved = approved;
 	}
 
-	public int getId() {
-		return id;
+	public int getAccountId() {
+		return accountId;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setAccountId(int id) {
+		this.accountId = id;
 	}
 
 	public String getFirstName() {
@@ -73,7 +84,7 @@ public class Account {
 		this.customerId = customerId;
 	}
 
-	public String getAccountNumber() {
+	public int getAccountNumber() {
 		return accountNumber;
 	}
 
@@ -85,12 +96,12 @@ public class Account {
 		this.balance = initialAmount;
 	}
 
-	public void setAccountNumber(String accountNumber) {
+	public void setAccountNumber(int accountNumber) {
 		this.accountNumber = accountNumber;
 	}
 	
 	public String printId() {
-		return "Account Id: "+ id +" Account Number: " + accountNumber + ", Balance:" + balance;
+		return "Account Id: "+ accountId +" Account Number: " + accountNumber + ", Balance:" + balance;
 	}
 	
 	public String print() {
@@ -100,7 +111,7 @@ public class Account {
 	@Override
 	public String toString() {
 		return "Account Number: " + accountNumber + ", Balance: " + balance + ", FirstName: " + firstName
-				+ ", Last Name: " + lastName + ", Customer Id: " + customerId;
+				+ ", Last Name: " + lastName + ", Customer Id: " + customerId + ", Account Id: " + accountId;
 	}
 
 

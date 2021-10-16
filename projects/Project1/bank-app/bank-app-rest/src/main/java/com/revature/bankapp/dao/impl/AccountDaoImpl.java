@@ -28,7 +28,7 @@ public class AccountDaoImpl implements AccountDao {
 		try (Connection connection = Util.getConnection()) {
 			String sql = "insert into account (account_number, balance, customer_id) values (?, ?, ?)";
 			PreparedStatement statement = connection.prepareStatement(sql);
-			statement.setString(1, account.getAccountNumber());
+			statement.setInt(1, account.getAccountNumber());
 			statement.setDouble(2, account.getBalance());
 			statement.setInt(3, CustomerDaoImpl.currentCustomerId);
 //			statement.setString(4, String.valueOf('N'));
@@ -50,7 +50,8 @@ public class AccountDaoImpl implements AccountDao {
 			ResultSet resultSet = statement.executeQuery();
 			while (resultSet.next()) {
 				Account account = new Account();
-				account.setAccountNumber(resultSet.getString("account_number"));
+				account.setAccountId(resultSet.getInt("id"));
+				account.setAccountNumber(resultSet.getInt("account_number"));
 				account.setBalance(resultSet.getDouble("balance"));
 				accountList.add(account);
 
@@ -60,18 +61,17 @@ public class AccountDaoImpl implements AccountDao {
 		return accountList;
 
 	}
-
-	public Account currentAccount() throws SQLException {
+	
+	public Account currentAccount(int accNum) throws SQLException {
 		Account account = null;
 		try (Connection connection = Util.getConnection()) {
 			String sql = "select * from account where account_number = ?";
 			PreparedStatement statement = connection.prepareStatement(sql);
-			String tempAccNumber = "";
-			statement.setString(1, tempAccNumber);
+			statement.setInt(1, accNum);
 			ResultSet resultSet = statement.executeQuery();
 			while (resultSet.next()) {
 				currentAccountId = resultSet.getInt("id");
-				String accNumber = resultSet.getString("account_number");
+				int accNumber = resultSet.getInt("account_number");
 				Double initialAmount = resultSet.getDouble("balance");
 
 				account = new Account(accNumber, initialAmount);
@@ -106,7 +106,7 @@ public class AccountDaoImpl implements AccountDao {
 
 	public void update(Account account) throws SQLException {
 		try (Connection connection = Util.getConnection()) {
-			String sql = "update account set initial_amount = ? where id = ?";
+			String sql = "update account set balance = ? where id = ?";
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setDouble(1, account.getBalance());
 			statement.setInt(2, currentAccountId);
@@ -152,7 +152,7 @@ public class AccountDaoImpl implements AccountDao {
 			ResultSet resultSet = statement.executeQuery();
 			while (resultSet.next()) {
 				transferAccountId = resultSet.getInt("id");
-				String accNumber = resultSet.getString("account_number");
+				int accNumber = resultSet.getInt("account_number");
 				Double initialAmount = resultSet.getDouble("initial_Amount");
 
 				account = new Account(accNumber, initialAmount);
@@ -189,8 +189,8 @@ public class AccountDaoImpl implements AccountDao {
 			ResultSet resultSet = statement.executeQuery();
 			while (resultSet.next()) {
 				Account account = new Account();
-				account.setId(resultSet.getInt("id"));
-				account.setAccountNumber(resultSet.getString("account_number"));
+				account.setAccountId(resultSet.getInt("id"));
+				account.setAccountNumber(resultSet.getInt("account_number"));
 				account.setBalance(resultSet.getDouble("initial_amount"));
 				pendingList.add(account);
 

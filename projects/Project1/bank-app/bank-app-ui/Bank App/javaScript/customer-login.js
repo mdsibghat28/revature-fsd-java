@@ -22,7 +22,7 @@ async function getCustomerById() {
         }
         let customer = await response.json();
         if (response.status == 200){
-            window.location.href = "customer.html";
+            window.location.href = "accounts.html";
         }
 
     } catch (err) {

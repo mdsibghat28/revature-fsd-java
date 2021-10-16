@@ -1,0 +1,17 @@
+<div class="movie-title">
+    {{movie.title}}
+    <span class="movie-year">{{movie.releaseDate | date: 'yyyy'}}</span>
+</div>
+<span class="movie-genre" *ngFor = "let genre of movie.genres">{{genre.name}} </span>
+<div class="movie-details">
+    <span>{{movie.mpaaRating.name}}</span> |
+    <span>{{movie.rating}}</span> |
+    <span>{{movie.duration}}</span> |
+    <span>{{movie.budget | currency: 'USD' : 'symbol' : '3.0'}}</span>
+</div>
+<span *ngIf = "!movie.bookingsOpen" class="booking-closed">
+    Booking closed
+</span>
+<span *ngIf = "movie.bookingsOpen" class="booking-open">
+    Booking Open
+</span>

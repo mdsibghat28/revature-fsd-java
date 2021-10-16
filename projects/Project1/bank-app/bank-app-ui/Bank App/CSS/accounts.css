@@ -51,3 +51,23 @@ ul.list-style-none li a {
 .balance{
     font-weight: 600;
 }
+
+h3 {
+    font-size: 20px;
+}
+h4{
+    font-size: 30px;
+}
+
+.view {
+    display: none;
+}
+
+#withdraw-error-message, #deposit-error-message {
+    color: red;
+    display: none;
+}
+
+#offcanvasExample {
+    width: 600px;
+}
