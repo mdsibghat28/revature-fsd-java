@@ -22,7 +22,7 @@
                                                 <button class="col-sm-6 col-md-5 btn btn-success disabled"><i class="fas fa-info"></i> Edit Details</button>
                                                 <button class="col-sm-6 col-md-5 btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-plus-square"></i> New Account</button>
                                                 <button class ="col-sm-6 col-md-5 btn btn-info text-white" id = "viewAccounts" ><i class="fas fa-eye"></i> Accounts</button>
-                                                <button class ="col-sm-6 col-md-5 btn btn-danger"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                                                <button onclick="location.href='index.html'" class ="col-sm-6 col-md-5 btn btn-danger"><i class="fas fa-sign-out-alt"></i> Logout</button>
                                             </div>
                                         </div>
                                         </div>`
@@ -73,17 +73,17 @@
 
         for (let i =0; i < cards.length; i++){
             depositbtn[i].addEventListener("click", function(){
-                 accDisp.innerText = depositbtn[i].dataset.accnum;
+                 accDisp.innerText = this.dataset.accnum;
                  currentAccNum = accDisp.innerText;
             });
             withdrawbtn[i].addEventListener("click", function(){
-                accDisp1.innerText = withdrawbtn[i].dataset.accnum;
+                accDisp1.innerText = this.dataset.accnum;
                 currentAccNum = accDisp1.innerText;
-                currentBalance = withdrawbtn[i].dataset.balance
+                currentBalance = this.dataset.balance
            });
            transactionBtn[i].addEventListener("click", function(){
-            transactionAcountId = transactionBtn[i].dataset.accountid;
-            alert(transactionAcountId)
+            transactionAcountId = this.dataset.accountid;
+            getTransactions();
        });
 
         }
@@ -115,7 +115,8 @@ withdrawSubmitBtn.addEventListener("click", function(){
     if(parseInt(amount1.value) > parseInt(currentBalance)){
         document.querySelector("#withdraw-error-message").innerText = "Insufficient Funds";
         document.querySelector("#withdraw-error-message").style.display = "block";
-    } else {
+    } 
+    if(amount1.value >= 100 && parseInt(amount1.value) < parseInt(currentBalance)) {
         withdraw();
         window.location.href = "accounts.html";
     }
@@ -165,6 +166,31 @@ async function withdraw() {
 
     }
     catch (err) {
+
+    }
+}
+
+async function getTransactions(){
+    try {
+        let response = await fetch("http://localhost:8080/bank-app-rest/transactions/"+transactionAcountId);
+        let transactions = await response.json();
+        let transactionDetails ="";
+        let i =0;
+        for(let transaction of transactions){
+            i++;
+            transactionDetails += `<tr>
+            <th scope="row">${i}</th>
+            <td>${transaction.accountId}</td>
+            <td>${transaction.type}</td>
+            <td>${transaction.amount}</td>
+          </tr>`
+
+        }
+
+        document.getElementById("transactionList").innerHTML = transactionDetails;
+
+
+    } catch{
 
     }
 }

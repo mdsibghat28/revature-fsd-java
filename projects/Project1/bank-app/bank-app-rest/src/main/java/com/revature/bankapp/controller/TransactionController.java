@@ -8,6 +8,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -67,16 +68,17 @@ public class TransactionController {
 	}
 	
 	@GET
+	@Path("/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response get() {
+	public Response get(@PathParam("id") int id) {
 		try {
 			List<Transactions> transactionList;
-			transactionList = dao.accountList();
+			transactionList = dao.transactionList(id);
 			System.out.println(transactionList);
 			System.out.println(CustomerDaoImpl.currentCustomerId);
 			return Response
 					.ok()
-					.entity(accountList)
+					.entity(transactionList)
 					.build();
 		} catch (SQLException e) {
 			e.printStackTrace();
