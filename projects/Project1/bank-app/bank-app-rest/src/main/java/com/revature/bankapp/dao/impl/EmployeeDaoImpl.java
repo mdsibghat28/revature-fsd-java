@@ -37,40 +37,33 @@ public class EmployeeDaoImpl implements EmployeeDao{
 
 	@Override
 	public List<Account> viewAccount() throws SQLException {
-//		List<Account> accountList = new ArrayList<>();
-//		try (Connection connection = Util.getConnection()) {
-//			String sql = "select c.id, c.first_name, account_number, balance from account\r\n" + 
-//					"inner join customer c on customer_id = c.id";
-//			PreparedStatement statement = connection.prepareStatement(sql);
-//			ResultSet resultSet = statement.executeQuery();
-//			while (resultSet.next()) {
-//				Account accountTemp = new Account();
-//				accountTemp.setCustomerId(resultSet.getInt("id"));
-//				accountTemp.setName(resultSet.getString("first_name"));
-//				accountTemp.setAccountNumber(resultSet.getString("account_number"));
-//				accountTemp.setInitialAmount(resultSet.getDouble("initial_amount"));
-//				accountList.add(accountTemp);
-//
-//			}
-//		}
-//		return accountList;
-		return null;
+		List<Account> accountList = new ArrayList<>();
+		try (Connection connection = Util.getConnection()) {
+			String sql = "select * from account order by customer_id";
+			PreparedStatement statement = connection.prepareStatement(sql);
+			ResultSet resultSet = statement.executeQuery();
+			while (resultSet.next()) {
+				Account accountTemp = new Account();
+				accountTemp.setCustomerId(resultSet.getInt("customer_id"));
+				accountTemp.setAccountId(resultSet.getInt("id"));
+				accountTemp.setAccountNumber(resultSet.getInt("account_number"));
+				accountTemp.setBalance(resultSet.getDouble("balance"));
+				accountList.add(accountTemp);
+
+			}
+		}
+		return accountList;
 	}
 
 	public List<Transactions> viewTransaction() throws SQLException {
 		List<Transactions> transactionList = new ArrayList<>();
 		try (Connection connection = Util.getConnection()) {
-			String sql = "select c.id, c.name, a.account_number, a.initial_amount, t.type, t.amount, t.account_id from transaction t\r\n" + 
-					"inner join account a on account_id = a.id\r\n" + 
-					"inner join customer c on customer_id = c.id";
+			String sql = "select * from transaction order by account_id";
 			PreparedStatement statement = connection.prepareStatement(sql);
 			ResultSet resultSet = statement.executeQuery();
 			while (resultSet.next()) {
 				Transactions transactionTemp = new Transactions();
-				transactionTemp.setCustomerId(resultSet.getInt("id"));
-				transactionTemp.setName(resultSet.getString("name"));
-				transactionTemp.setAccountNumber(resultSet.getString("account_number"));
-				transactionTemp.setInitialAmount(resultSet.getDouble("initial_amount"));
+				transactionTemp.setTransactionId(resultSet.getInt("id"));
 				transactionTemp.setType(resultSet.getString("type").charAt(0));
 				transactionTemp.setAmount(resultSet.getDouble("amount"));
 				transactionTemp.setAccountId(resultSet.getInt("account_id"));
@@ -85,13 +78,13 @@ public class EmployeeDaoImpl implements EmployeeDao{
 		Employee employee = null;
 		
 		try (Connection connection = Util.getConnection()){
-			String sql = "select * from admin where user_id = ?";
+			String sql = "select * from employee where email = ?";
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setString(1, userId);
 			ResultSet resultSet = statement.executeQuery();
 			while (resultSet.next()) {
 				String name = resultSet.getString("name");
-				String userid = resultSet.getString("user_id");
+				String userid = resultSet.getString("email");
 				String password = resultSet.getString("password");
 				
 				employee = new Employee(name, userid, password);

@@ -125,7 +125,7 @@
                     <div class="row mb-3">
                       <label for="empEmail" class="col-sm-2 col-form-label">Email</label>
                       <div class="col-sm-10">
-                        <input type="email" name="empEmail" class="form-control" id="empEmail" required>
+                        <input type="text" name="empEmail" class="form-control" id="empEmail" required>
                         <div class="invalid-feedback">Please enter email/user id.</div>
                       </div>
                     </div>
@@ -136,7 +136,8 @@
                         <div class="invalid-feedback">Please enter password</div>
                       </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Login</button>
+                    <div id="login-error1">Invalid Username or Password</div>
+                    <button type="button" id="empLogin" class="btn btn-primary">Login</button>
                   </form>
             </div>
             <div class="modal-footer">

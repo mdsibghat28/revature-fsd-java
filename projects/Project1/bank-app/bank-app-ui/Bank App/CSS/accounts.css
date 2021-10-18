@@ -1,5 +1,8 @@
 body{
     background: #edf1f5;
+    font-family: "times new roman";
+    background-image: url("../images/pattern16.jpg");
+    /* background-position: top; */
 }
 .card {
     position: relative;
@@ -70,4 +73,16 @@ h4{
 
 #offcanvasExample {
     width: 600px;
+    background-image: url("../images/pattern15.jpg");
+    background-position-x: -600px;
+}
+
+
+#offcanvasExampleLabel {
+    margin-left: 200px;
+    font-size: 30px;
+    font-style: italic;
+    font-variant: small-caps;
+    font-weight: 600;
+    border: 1px dashed rgba(11, 0, 167, 0.336);
 }

@@ -29,3 +29,36 @@ async function getCustomerById() {
 
     }
 };
+
+/* ********** Employee Login************ */ 
+
+let submitBtn1 = document.getElementById("empLogin");
+let form1 = document.forms[1];
+let email1 = form1.empEmail;
+let password1 = form1.empPassword;
+let emailbtn1 = document.getElementById("empEmail");
+let passwordbtn1 = document.getElementById("empPassword");
+let loginError1 = document.getElementById("login-error1");
+
+loginError1.style.display = "none";
+submitBtn1.addEventListener("click", function(){
+    getEmployeeById();
+
+});
+
+
+async function getEmployeeById() {
+    try {
+        let response = await fetch("http://localhost:8080/bank-app-rest/employees/"+email1.value+"/"+password1.value);
+        console.log(response.status);
+        if(response.status == "401"){
+            loginError1.style.display = "block";
+        }
+        if (response.status == 200){
+            window.location.href = "employee.html";
+        }
+
+    } catch (err) {
+
+    }
+};

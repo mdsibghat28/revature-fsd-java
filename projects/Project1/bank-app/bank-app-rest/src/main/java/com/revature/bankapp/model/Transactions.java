@@ -3,6 +3,7 @@ package com.revature.bankapp.model;
 public class Transactions {
 
 	private int customerId;
+	private int transactionId;
 	private String name;
 	private String accountNumber;
 	private double initialAmount;
@@ -19,6 +20,16 @@ public class Transactions {
 		
 	}
 	
+	
+	
+
+	public int getTransactionId() {
+		return transactionId;
+	}
+
+	public void setTransactionId(int transactionId) {
+		this.transactionId = transactionId;
+	}
 
 	public int getCustomerId() {
 		return customerId;

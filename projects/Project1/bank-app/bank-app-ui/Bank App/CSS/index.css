@@ -1,7 +1,9 @@
 body {
-background-image: url(../images/pattern5.jpg);
+background-image: url(../images/pattern17.jpg);
 background-repeat: no-repeat;
 background-size: cover;
+font-family: "times new roman";
+font-weight: 500;
 
 }
 #cardContainer {
@@ -25,6 +27,10 @@ img {
 
 h5, p, .card-body{
     text-align: center;
+    font-weight: 500;
+}
+h5 {
+    font-weight: 600;
 }
 
 .modal-content {
@@ -85,10 +91,14 @@ ul {
     line-height: 30px;
 }
 
-#login-error {
+#login-error, #login-error1 {
     color: crimson;
     font-weight: 500;
     margin-bottom: 10px;
     text-align: center;
+}
+
+.btn {
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
