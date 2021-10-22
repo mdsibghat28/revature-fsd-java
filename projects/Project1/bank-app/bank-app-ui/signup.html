@@ -30,13 +30,6 @@
                  <li class="nav-items">
                      <a href="#" class="nav-link">Services</a>
                  </li>
-                 <!-- <li class="nav-item dropdown">
-                     <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Login</a>
-                     <ul class="dropdown-menu">
-                         <li><a href="#" class="dropdown-item">Customer Login</a></li>
-                         <li><a href="#" class="dropdown-item">Employee Login</a></li>
-                     </ul>
-                 </li> -->
                  <li class="nav-items">
                      <a href="signup.html" class="nav-link active">New User</a>
                  </li>
@@ -47,50 +40,49 @@
      <section>
          <div class="container-fluid" id="form">
             <div class="row justify-content-center">
-                <div class="col-8">
+                <div class="col-mb-8">
                     <form class="row g-3 needs-validation" novalidate>
                         <div class="col-md-6">
                             <label for="firstName" class="form-label">First Name</label>
-                            <input type="text" class="form-control" id="firstName" required>
+                            <input type="text" class="form-control" id="firstName" name="firstName" required>
                             <div class="invalid-feedback">Please Enter First Name</div>
                           </div>
                           <div class="col-md-6">
                             <label for="lastName" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" id="lastName" required>
+                            <input type="text" class="form-control" id="lastName" name="lastName" required>
                             <div class="invalid-feedback"> Please Enter Last Name</div>
                           </div>
                         <div class="col-md-6">
                           <label for="email" class="form-label">Email</label>
-                          <input type="email" class="form-control" id="email" placeholder="abc@example.com" required>
+                          <input type="email" class="form-control" id="email" placeholder="abc@example.com" name="email" required>
                           <div class="invalid-feedback">User name cannot be empty</div>
                         </div>
                         <div class="col-md-6">
                           <label for="password" class="form-label">Password</label>
-                          <input type="password" class="form-control" id="password" required>
-                          <div class="invalid-feedback">Password Cannot be empty</div>
+                          <input type="password" class="form-control" id="password" name="password" minlength="4" required>
+                          <div class="invalid-feedback">Password should be min 4</div>
                         </div>
                         <div class="col-12">
-                          <label for="address" class="form-label">Address</label>
-                          <input type="text" class="form-control" id="address" placeholder="" required>
-                          <div class="invalid-feedback">Please provide valid address</div>
+                          <label for="phoneNumber" class="form-label">Phone Number</label>
+                          <input type="number" class="form-control" id="phoneNumber">
                         </div>
                         <div class="col-md-6">
-                          <label for="city" class="form-label">City</label>
-                          <input type="text" class="form-control" id="city" required>
-                          <div class="invalid-feedback">Enter City</div>
+                          <label for="panCard" class="form-label">Pan Card Number</label>
+                          <input type="text" class="form-control" id="panCard">
                         </div>
                         <div class="col-md-4">
-                          <label for="state" class="form-label">State</label>
-                          <select id="state" class="form-select" required>
-                            <option selected>Choose...</option>
-                            <option>...</option>
+                          <label for="city" class="form-label">City</label>
+                          <select id="city" class="form-select">
+                            <option>--Select City--</option>
+                            <option value="delhi">Delhi</option>
+                            <option value="chennai">Chennai</option>
+                            <option value="mumbia">Mumbai</option>
+                            <option value="banglore">Banglore</option>
                           </select>
-                          <div class="invalid-feedback">Please select a valid state</div>
                         </div>
                         <div class="col-md-2">
-                          <label for="zip" class="form-label">Pin Code</label>
-                          <input type="text" class="form-control" id="zip" required>
-                          <div class="invalid-feedback">Please provide a valid pin code</div>
+                          <label for="state" class="form-label">State</label>
+                          <input type="text" class="form-control" id="state">
                         </div>
                         <div class="col-12">
                           <div class="form-check">
@@ -102,7 +94,7 @@
                           </div>
                         </div>
                         <div class="col-12" style="text-align: center;">
-                          <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="button" class="btn btn-primary" id="submit" >Submit</button>
                         </div>
                       </form>
                 </div>

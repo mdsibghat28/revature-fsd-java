@@ -1,0 +1,12 @@
+/* a:visited {
+    color: white
+  } */
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .active-link {
+    border: solid 3px rgb(85, 206, 236)
+  }
+  

@@ -48,8 +48,6 @@ public class AccountController {
 		try {
 			List<Account> accountList;
 			accountList = dao.accountList();
-			System.out.println(accountList);
-			System.out.println(CustomerDaoImpl.currentCustomerId);
 			return Response
 					.ok()
 					.entity(accountList)

@@ -13,7 +13,7 @@
 <body>
     <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md sticky-top" style="background-color: rgb(23, 5, 104);">
         <div class="container-fluid">
-         <a href="#" class="navbar-brand">
+         <a href="index.html" class="navbar-brand">
              <img src="images/brandLogo.png" alt=""  class="" width="40" height="40">
             <span> Evos Bank </span>
          </a>
@@ -34,8 +34,8 @@
                  <li class="nav-item dropdown">
                      <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Services</a>
                      <ul class="dropdown-menu">
-                         <li><a href="" class="dropdown-item">New Account</a></li>
-                         <li><a href="" class="dropdown-item">View Accounts</a></li>
+                         <li><a href="" class="dropdown-item"data-bs-toggle="modal" data-bs-target="#staticBackdrop">New Account</a></li>
+                         <li><a href="accounts.html" class="dropdown-item">View Accounts</a></li>
                      </ul>
                  </li>
                  <li class="nav-items">
@@ -50,19 +50,12 @@
                 <div class="card" style="width: 18rem;">
                     <!-- <img src="images/newCustomer2.jpg" class="card-img-top" alt="..."> -->
                     <div class="card-body">
-                      <h5 class="card-title">Customer Details</h5>
+                      <h4 class="card-title">Customer Details</h4>
                       <p class="card-text">
-                          <ul id="customerDetails">
-                              <li>First Name : First Name</li>
-                              <li>Last Name : Last Name</li>
-                              <li>User Id : Email</li>
-                              <li>Address : Address</li>
-                              <li>State : State</li>
-                              <li>City : City</li>
-                              <li>Pin Code : Zip</li>
-                          </ul>
+                          <ul id="customerDetails"></ul>
                       </p>
-                      <a href="#" class="btn btn-info">Edit Details</a>
+                      <hr>
+                      <a href="#" class="btn btn-success">Edit Details</a>
                     </div>
                   </div>
                   <div class="card" style="width: 18rem;">
@@ -78,7 +71,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Accounts</h5>
                       <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, reprehenderit eligendi, perferendis necessitatibus nostrum eaque dolore ullam saepe alias, cum atque dolor earum dignissimos ad!</p>
-                      <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Login</a>
+                      <a href="accounts.html" class="btn btn-secondary">View Accounts</a>
                     </div>
                  </div>
                  <div class="card" style="width: 18rem;">
@@ -86,7 +79,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Log Out</h5>
                       <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora quos, at obcaecati minus id similique aut eligendi fugiat ducimus iste mollitia! Deleniti totam nisi fugit.</p>
-                      <a href="#" class="btn btn-info">Reach us</a>
+                      <a href="index.html" class="btn btn-danger">Log Out</a>
                     </div>
                  </div>
             </div>
@@ -103,14 +96,14 @@
                         <div class="row mb-3">
                           <label for="accountNumber" class="col-sm-4 col-form-label">Account Number</label>
                           <div class="col-sm-8">
-                            <input type="text" class="form-control" id="accountNumber" required>
+                            <input type="number" name="accountNumber" class="form-control" id="accountNumber" required>
                             <div class="invalid-feedback">Please enter Account Number</div>
                           </div>
                         </div>
                         <div class="row mb-3">
                           <label for="initialDeposit" class="col-sm-4 col-form-label">Deposit Amount</label>
                           <div class="col-sm-8">
-                            <input type="number" class="form-control" id="initialDeposit" required>
+                            <input type="number" name="initialDeposit" class="form-control" id="initialDeposit" required>
                             <div class="invalid-feedback">Please enter deposit</div>
                           </div>
                         </div>
@@ -124,21 +117,19 @@
                                     <option value="credit">Credit</option>
                                     <option value="current">Current</option>
                                 </select>
-                                <div class="invalid-feedback">Select account type</div>
                             </div>
                             <label for="branch" class="col-sm-5 col-mb-3 col-form-label">Branch</label>
                             <div class="col-sm-7 col-mb-3">
                                 <select name="branch" id="branch" class="form-select">
                                     <option>-- Branch--</option>
-                                    <option value="savings">Chennai</option>
-                                    <option value="salary">Banglore</option>
-                                    <option value="credit">Delhi</option>
-                                    <option value="current">Mumbai</option>
+                                    <option value="chennai">Chennai</option>
+                                    <option value="banglore">Banglore</option>
+                                    <option value="delhi">Delhi</option>
+                                    <option value="mumbai">Mumbai</option>
                                 </select>
-                                <div class="invalid-feedback">Select branch</div>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit Details</button>
+                        <button type="button" id="submit" class="btn btn-primary">Submit Details</button>
                       </form>
                 </div>
                 <div class="modal-footer">
@@ -187,6 +178,8 @@
            </div>
         </div>
     </section>
+    <script src="javaScript/customer.js"></script>
+    <script src="javaScript/formValidation.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 </html>

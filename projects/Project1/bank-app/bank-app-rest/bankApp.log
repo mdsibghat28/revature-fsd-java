@@ -2503,3 +2503,6 @@
 [http-nio-8080-exec-50] 2021-10-18 14:34:16 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
 [http-nio-8080-exec-49] 2021-10-18 14:34:16 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
 [http-nio-8080-exec-56] 2021-10-18 14:34:16 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[http-nio-8080-exec-51] 2021-10-18 15:25:54 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[http-nio-8080-exec-52] 2021-10-18 15:25:54 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
+[http-nio-8080-exec-53] 2021-10-18 15:25:54 INFO  com.revature.bankapp.dao.Util  - *****Connecting to DataBase*****
